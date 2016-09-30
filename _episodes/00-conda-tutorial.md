@@ -1,5 +1,5 @@
 ---
-title: "Quick guide to Python package management with Conda."
+title: "Getting Started with Conda"
 teaching: 15
 exercises: 0
 questions:
