@@ -1,4 +1,5 @@
 ---
+
 title: "Getting Started with Conda"
 teaching: 15
 exercises: 0
@@ -13,6 +14,7 @@ keypoints:
 - conda package manager works across systems
 - projects can be separated by individual environments
 - this tool will save headaches when trying to install packages with dependancies or managing multiple libraries/projects
+
 ---
 
 ### What is Conda?
@@ -36,15 +38,15 @@ Similar to [pip](https://pypi.python.org/pypi/pip), [**conda**](http://conda.pyd
 2. Once Anaconda installation step is finished run `python` in the command line to test if Anaconda is installed correctly.
 If Anaconda is installed correctly, you should have this prompt, which emphasizes **Anaconda**:
 
-  ```
-  $ python
-  Python 2.7.11 |Anaconda custom (x86_64)| (default, Dec  6 2015, 18:57:58)
-  [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
-  Type "help", "copyright", "credits" or "license" for more information.
-  Anaconda is brought to you by Continuum Analytics.
-  Please check out: http://continuum.io/thanks and https://anaconda.org
-  >>>
-  ```
+```bash
+$ python
+Python 2.7.11 |Anaconda custom (x86_64)| (default, Dec  6 2015, 18:57:58)
+[GCC 4.2.1 (Apple Inc. build 5577)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+Anaconda is brought to you by Continuum Analytics.
+Please check out: http://continuum.io/thanks and https://anaconda.org
+>>>
+```
 
 ### Installing Miniconda
 
