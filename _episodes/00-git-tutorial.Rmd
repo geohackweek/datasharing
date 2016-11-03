@@ -9,6 +9,24 @@ output:
   toc_float: true
 ---
 
+---
+
+title: "Getting Started with Git"
+teaching: 15
+exercises: 0
+questions:
+- "What is Git and Github?"
+- "Why are we using Git?"
+objectives:
+- "Install Docker on your computer"
+- "Learn how to add remove and commit changes to github repo"
+- 
+keypoints:
+- Git is a version control tool that allows you to keep track of your work
+- Github is a cloud platform where you can share, view and organize your collaborations
+
+---
+
 We'll start by exploring how version control can be used
 to keep track of what one person did and when.
 Even if you aren't collaborating with other people,
