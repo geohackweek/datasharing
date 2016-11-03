@@ -1,6 +1,3 @@
-# Git Tutorial
-Ben Weinstein  
-November 2, 2016  
 
 ---
 
