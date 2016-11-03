@@ -1,11 +1,6 @@
----
-title: "Git Tutorial"
-author: "Ben Weinstein"
-date: "November 2, 2016"
-output: 
-  html_document:
-    keep_md: true
----
+# Git Tutorial
+Ben Weinstein  
+November 2, 2016  
 
 ---
 
