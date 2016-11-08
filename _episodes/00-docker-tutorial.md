@@ -17,8 +17,19 @@ keypoints:
 
 ---
 
-### What is Conda?
-Similar to [pip](https://pypi.python.org/pypi/pip), [**conda**](http://conda.pydata.org/docs/) is an **open source package and environment management system** for installing multiple versions of software packages, their dependencies and switching easily between them. It works on Linux, OS X and Windows.
+### What is Docker Hub?
+Existing docker images are available on [Docker Hub](https://hub.docker.com/).
+
+![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/DockerHub1.png)
+
+![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/DockerHub2.png)
+
+![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/DockerHub3.png)
+
+![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/DockerHub4.png)
+
+Reference-style:
+
 
 - introduction to docker hub
 - downloading docker images
