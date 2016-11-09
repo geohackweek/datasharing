@@ -6,13 +6,14 @@ exercises: 0
 questions:
 - "How to use Docker?"
 objectives:
-- "Explain images and containers"
-- "Run a Docker "
-- "Restart a Docker container"
--
+- "Use Docker Hub"
+- "Run a Docker Container"
+- "Use Jupyter Notebooks with a Docker Container"
+- "Delete a Docker Containers and Images"
+- "Link Data Volumes"
+- "Create a Docker Image"
 keypoints:
--
--
+- "Docker images can be used instead of installing software natively on your computer"
 
 ---
 
@@ -65,7 +66,7 @@ $ docker images
 ```
 <br> 
   
-### Create Docker Containers
+### Run Docker Containers
 The `docker run` command starts a new **docker container** using a **docker image**.
 
 A **docker image** is a filesystem and parameters to use at runtime. It doesn’t have state and never changes. A **docker container** is a running instance of an image.
