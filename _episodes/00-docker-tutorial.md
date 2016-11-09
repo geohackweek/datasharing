@@ -162,7 +162,7 @@ Data for the tutorials have been included in the docker images for convenience. 
 ```bash
 $ docker run -i -t -v /Users/Home/Data/:/data --name my_container geohackweek2016/arraystutorial 
 ```
-"/Users/Home/Data/" is the filepath the data directory on your local filesystem. "/data" is the filepath to the folder in your container where the data will be linked. Note that any data in the "/data" folder will be replaced by the data from your local filesystem.  The '-v' flag specifies that you are linking a data volume.  **Any changes to the data made in the container will be propogated to the data on your local filesystem.** 
+"/Users/Home/Data/" is the filepath to the data directory on your local filesystem. "/data" is the filepath to the folder in your container where the data will be linked. Note that any data in the "/data" folder will be replaced by the data from your local filesystem.  The '-v' flag specifies that you are linking a data volume.  **Any changes to the data made in the container will be propogated to the data on your local filesystem.** 
 
 <br>
 Copy from a container to your local filesystem.
