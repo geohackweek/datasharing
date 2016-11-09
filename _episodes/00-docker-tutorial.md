@@ -192,20 +192,23 @@ RUN mkdir /opt/notebooks
 COPY /data/ /data
 ```
 
-This Dockerfile is based on the anaconda python 3.x distribution from continuumio [available on Docker Hub](https://hub.docker.com/r/continuumio/anaconda3/).  Some additional packages are added using `apt-get install` and `conda install`.  Data are copied into a folder in the docker image using `COPY /data/ /data`.  This data will be permanently included in the docker image.  A drawback to including data in the docker image is that the docker image will need more disk space.   
+This Dockerfile uses the anaconda python 3.x distribution from continuumio [available on Docker Hub](https://hub.docker.com/r/continuumio/anaconda3/) as a base.  Some additional packages are added using `apt-get install` and `conda install`.  Data are copied into a folder in the docker image using `COPY /data/ /data`.  This data will be permanently included in the docker image.  A drawback to including data in the docker image is that the docker image will need more disk space.  As an alternative, see the Linking Data Volumes section above for linking data to the container.   
   
+<br>  
 A Dockerfile is used to create an image using the following command in the folder with the Dockerfile: 
 
 ```bash
 $ docker build -t geohackweek2016/new_dockerimage .  
 ```
 
+<br>
 The docker image can be pushed to the Docker Hub. First, login using your Docker Hub username and password. 
 
 ```bash
 $ docker login
 ```
 
+<br>
 Then push the image to Docker Hub. 
 ```bash
 $ docker push geohackweek2016/new_dockerimage
