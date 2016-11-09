@@ -42,7 +42,7 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
 <br> <br>
   
-### Docker Hub resources for geospatial research
+### Docker Hub Resources for Geospatial Research
 [geohackweek2016](https://hub.docker.com/u/geohackweek2016/)   
 [Google Earth Engine](https://hub.docker.com/u/tylere/)   
 [Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
@@ -108,7 +108,7 @@ $ docker ps -a
 ```
 <br>  <br>
   
-### Docker Containers work with Jupyter Notebooks
+### Docker Containers Work With Jupyter Notebooks
 The following command will start a new container with the ports open for jupyter notebooks.   
 
 ```bash
@@ -152,7 +152,7 @@ $ docker rmi -f geohackweek2016/arraystutorial
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
 <br>
-<hr border-color="black">   
+<hr style="border-color: black">   
 
 ### Linking Data Volumes
 
