@@ -32,18 +32,18 @@ Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
 
 #### Download Docker Images
-The ```docker pull``` command gets the latest version of the docker image from the Docker Hub.
+The `docker pull` command gets the latest version of the docker image from the Docker Hub.
 ```bash
 $ docker pull geohackweek2016/arraystutorial
 ```
 #### View Docker Images
-The ```docker images``` command shows you all the docker images that you have available on your local machine.
+The `docker images` command shows you all the docker images that you have available on your local machine.
 
 ```bash
 $ docker images
 ```
 #### Create Docker Containers
-The ```docker run``` command starts a new **docker container** using a **docker image**.
+The `docker run` command starts a new **docker container** using a **docker image**.
 
 A **docker image** is a filesystem and parameters to use at runtime. It doesn’t have state and never changes. A **docker container** is a running instance of an image.
 
@@ -52,13 +52,13 @@ $ docker run -i -t --name my_container geohackweek2016/arraystutorial
 ```
 The '-i' flag specifies that you want to run the docker container interactively. The '-t' flag specifies that you want run a pseudoterminal when the container is started.  The '--name' flag specifies a name chosen by you for the container.  If you do not use the '--name' flag, then a name will be automatically assigned to the container.
 
-Type ```exit``` on the command line to leave the docker container.
+Type `exit` on the command line to leave the docker container.
 ```bash
 root:/# exit
 ```
 
 #### Start Docker Containers
-To view existing docker containers, type ```docker ps -a```
+To view existing docker containers, type `docker ps -a`
 
 ```bash
 $ docker ps -a
@@ -90,7 +90,7 @@ Start a jupyter notebook from the command line of the container.
 ```bash
 root:/#  jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser
 ```
-The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port '8888' must match the ports in the '-p 8888:8888' flag in the ```docker run``` command.
+The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port '8888' must match the ports in the '-p 8888:8888' flag in the `docker run` command.
 
 View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888
 
@@ -105,7 +105,7 @@ To remove all docker containers:
 ```bash
 docker rm $(docker ps -a -q)
 ```
-'$(docker ps -a -q)' lists all the container ids which are then removed by the ```docker rm``` comand.
+'$(docker ps -a -q)' lists all the container ids which are then removed by the `docker rm` comand.
 
 To remove a single docker image:
 ```bash
