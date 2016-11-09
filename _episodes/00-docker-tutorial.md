@@ -31,7 +31,7 @@ Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
 
-#### Download Docker Images
+#### Download Docker Images   
 The ```docker pull``` command gets the latest version of the docker image from the Docker Hub.
 
 ```bash
