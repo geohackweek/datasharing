@@ -1,11 +1,10 @@
 ---
 
-title: "Getting Started with Docker"
+title: "Introduction to Docker"
 teaching: 15
 exercises: 0
 questions:
-- "How to run Docker?"
-- "How to create a new Docker image?"
+- "How to use Docker?"
 objectives:
 - "Explain images and containers"
 - "Run a Docker "
@@ -76,6 +75,7 @@ $ docker run -i -t --name my_container geohackweek2016/arraystutorial
 ```
 The '-i' flag specifies that you want to run the docker container interactively. The '-t' flag specifies that you want run a pseudoterminal when the container is started.  The '--name' flag specifies a name chosen by you for the container.  If you do not use the '--name' flag, then a name will be automatically assigned to the container.
 
+
 Type `exit` on the command line to leave the docker container.   
 
 ```bash
@@ -91,12 +91,14 @@ $ docker ps -a
 ```
 The '-a' flag specifies that you want to see all the containers.
 
+
 To start an existing docker container named 'my_container':   
 
 ```bash
 $ docker start -a -i my_container
 ```
 The '-a' flag specifies that you want to attach the container and the '-i' flag specifies that you want to run the docker container interactively.
+
 
 To rename a docker container:   
 
@@ -115,12 +117,14 @@ $ docker run -i -t --name jupyter_container -p 8888:8888 geohackweek2016/arrayst
 ```
 The '-p 8888:8888' links the port 8888 on your local filesystem to the port 8888 in the container.
 
+
 Start a jupyter notebook from the command line of the container.
 
 ```bash
 root:/#  jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser
 ```
 The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port '8888' must match the ports in the '-p 8888:8888' flag in the `docker run` command.
+
 
 **View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888**
 
@@ -133,12 +137,14 @@ To remove a single docker container:
 $ docker rm my_container
 ```
 
+
 To remove all docker containers:   
 
 ```bash
 $ docker rm $(docker ps -a -q)
 ```
 '$(docker ps -a -q)' lists all the container ids which are then removed by the `docker rm` comand.
+
 
 To remove a single docker image:   
 
