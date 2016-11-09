@@ -37,14 +37,14 @@ The ```docker pull``` command gets the latest version of the docker image from t
 ```bash
 $ docker pull geohackweek2016/arraystutorial
 ```   
-
+  
 #### View Docker Images   
 The ```docker images``` command shows you all the docker images that you have available on your local machine.
 
 ```bash
 $ docker images
 ```   
-
+  
 #### Create Docker Containers   
 The ```docker run``` command starts a new **docker container** using a **docker image**.
 
