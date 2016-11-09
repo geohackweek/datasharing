@@ -41,9 +41,9 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
 
 #### Docker Hub resources for geospatial research
-[geohackweek2016](https://hub.docker.com/u/geohackweek2016/)
-[Google Earth Engine](https://hub.docker.com/u/tylere/)
-[Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.
+[geohackweek2016](https://hub.docker.com/u/geohackweek2016/)   
+[Google Earth Engine](https://hub.docker.com/u/tylere/)   
+[Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
 [Rocker](https://hub.docker.com/u/rocker/) - R and R Studio.
 
 #### Download Docker Images
