@@ -152,15 +152,23 @@ $ docker rmi -f geohackweek2016/arraystutorial
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
 <br>
-<hr size="3" style="border-color: black; color:black">   
+<hr style="border-color: black; border-width: 2">   
 
 ### Linking Data Volumes
 
+Data for the tutorials have been included in the docker images for convenience.  However, you may want to store your data on your local filesystem particularly if the data files are large.  Data outside the container can be linked to the container using the following commmand:
 
-- access local data within a docker container
+```bash
+$ docker run -i -t -v /Users/Home/Data/:/data geohackweek2016/arraystutorial 
+```
+"/Users/Home/Data/" is the filepath the data directory on your local filesystem. "/data" is the filepath to the folder in your container where the data will be linked. Note that data in the "/data" folder will be overwritten by the data from your local filesystem.  The '-v' flag specifies that you are linking a data volume.  **Any changes to the data made in the container will be propogated to the data on your local filesystem.** 
 
-- save data from a docker container to a folder on your local file system
-
+<br>
+Copy from a container to your local filesystem.
+```bash
+$ docker cp my_container:/file/path/within/container /host/path/target
+```
+<br>  
 
 ### Create a Docker Image for Your Project
 - create a docker image for your project
