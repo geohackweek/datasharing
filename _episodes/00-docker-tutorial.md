@@ -47,22 +47,23 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 [Google Earth Engine](https://hub.docker.com/u/tylere/)   
 [Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
 [Rocker](https://hub.docker.com/u/rocker/) - R and R Studio.
-<br> <br>   
+<br> <br>
+ 
 ### Download Docker Images
 The `docker pull` command gets the latest version of the docker image from the Docker Hub.   
 
 ```bash
 $ docker pull geohackweek2016/arraystutorial
 ```
-<br> <br>
-  
+<br> 
+ 
 ### View Docker Images
 The `docker images` command shows you all the docker images that you have available on your local machine.   
 
 ```bash
 $ docker images
 ```
-<br> <br>
+<br> 
   
 ### Create Docker Containers
 The `docker run` command starts a new **docker container** using a **docker image**.
@@ -80,7 +81,7 @@ Type `exit` on the command line to leave the docker container.
 ```bash
 root:/# exit
 ```
-<br> <br>
+<br> 
   
 ### Start Docker Containers
 To view existing docker containers, type `docker ps -a`
@@ -105,7 +106,7 @@ To rename a docker container:
 $ docker rename my_container better_name
 $ docker ps -a
 ```
-<br>  <br>
+<br>  
   
 ### Docker Containers Work with Jupyter Notebooks
 The following command will start a new container with the ports open for jupyter notebooks.   
@@ -125,7 +126,7 @@ The '--notebook-dir' flag specifies the folder in the container where the jupyte
 
 <br>
 **View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888**
-<br>  <br>
+<br>  
  
 ### Deleting Docker Containers and Images
 To remove a single docker container:   
@@ -151,7 +152,7 @@ $ docker rmi -f geohackweek2016/arraystutorial
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
 <br>
-<hr style="border-color: black">   
+<hr size="2" style="border-color: black; color:black">   
 
 ### Linking Data Volumes
 
