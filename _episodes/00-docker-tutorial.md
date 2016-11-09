@@ -9,7 +9,7 @@ objectives:
 - "Use Docker Hub to Find Docker Images"
 - "Run a Docker Container"
 - "Use Jupyter Notebooks with a Docker Container"
-- "Delete a Docker Containers and Images"
+- "Delete Docker Containers and Images"
 - "Link Data Volumes"
 - "Create a Docker Image"
 keypoints:
