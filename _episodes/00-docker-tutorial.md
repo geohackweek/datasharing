@@ -33,7 +33,7 @@ You will see a list of repositories, click on geohackweek2016/vectortutorial:
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub3.png)
 
 
-To obtain the docker image, copy the Docker Pull Command to use in your terminal:
+To obtain the docker image, copy the Docker Pull Command to use in your terminal:   
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
 
 #### Docker Hub resources for geospatial research
