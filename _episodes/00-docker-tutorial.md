@@ -165,6 +165,7 @@ $ docker run -i -t -v /Users/Home/Data/:/data geohackweek2016/arraystutorial
 
 <br>
 Copy from a container to your local filesystem.
+
 ```bash
 $ docker cp my_container:/file/path/within/container /host/path/target
 ```
