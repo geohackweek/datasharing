@@ -18,7 +18,7 @@ keypoints:
 ---
 
 #### Install Docker
-These exercises assume that Docker has already been installed on your computer.  If Docker has not been installed, follow these [instructions](https://geohackweek.github.io/preliminary/01-install-docker).
+These instructions assume that Docker has already been installed on your computer.  If Docker has not been installed, follow these [instructions](https://geohackweek.github.io/preliminary/01-install-docker).
 
 #### Find Docker Images
 Existing docker images are available on [Docker Hub](https://hub.docker.com/).
@@ -90,7 +90,7 @@ Start a jupyter notebook from the command line of the container.
 ```bash
 root:/#  jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser
 ```
-The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port must match the '-p 8888:8888' flag in the ```docker run``` command.
+The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port '8888' must match the ports in the '-p 8888:8888' flag in the ```docker run``` command.
 
 View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888
 
