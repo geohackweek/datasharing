@@ -51,14 +51,15 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 
 
 ### Download Docker Images
-The `docker pull` command gets the latest version of the docker image from the Docker Hub.
+The `docker pull` command gets the latest version of the docker image from the Docker Hub.   
+
 ```bash
 $ docker pull geohackweek2016/arraystutorial
 ```
 
 
 ### View Docker Images
-The `docker images` command shows you all the docker images that you have available on your local machine.
+The `docker images` command shows you all the docker images that you have available on your local machine.   
 
 ```bash
 $ docker images
@@ -75,7 +76,8 @@ $ docker run -i -t --name my_container geohackweek2016/arraystutorial
 ```
 The '-i' flag specifies that you want to run the docker container interactively. The '-t' flag specifies that you want run a pseudoterminal when the container is started.  The '--name' flag specifies a name chosen by you for the container.  If you do not use the '--name' flag, then a name will be automatically assigned to the container.
 
-Type `exit` on the command line to leave the docker container.
+Type `exit` on the command line to leave the docker container.   
+
 ```bash
 root:/# exit
 ```
@@ -89,13 +91,15 @@ $ docker ps -a
 ```
 The '-a' flag specifies that you want to see all the containers.
 
-To start an existing docker container named 'my_container':
+To start an existing docker container named 'my_container':   
+
 ```bash
 $ docker start -a -i my_container
 ```
 The '-a' flag specifies that you want to attach the container and the '-i' flag specifies that you want to run the docker container interactively.
 
-To rename a docker container:
+To rename a docker container:   
+
 ```bash
 $ docker rename my_container better_name
 $ docker ps -a
@@ -104,7 +108,8 @@ $ docker ps -a
 
 ### Docker Containers work with Jupyter Notebooks
 
-The following command will start a new container with the ports open for jupyter notebooks.
+The following command will start a new container with the ports open for jupyter notebooks.   
+
 ```bash
 $ docker run -i -t --name jupyter_container -p 8888:8888 geohackweek2016/arraystutorial
 ```
@@ -122,18 +127,21 @@ The '--notebook-dir' flag specifies the folder in the container where the jupyte
 
 ### Deleting Docker Containers and Images
 
-To remove a single docker container:
+To remove a single docker container:   
+
 ```bash
 $ docker rm my_container
 ```
 
-To remove all docker containers:
+To remove all docker containers:   
+
 ```bash
 $ docker rm $(docker ps -a -q)
 ```
 '$(docker ps -a -q)' lists all the container ids which are then removed by the `docker rm` comand.
 
-To remove a single docker image:
+To remove a single docker image:   
+
 ```bash
 $ docker rmi -f geohackweek2016/arraystutorial
 ```
@@ -150,7 +158,7 @@ The '-f' flag means force the removal of the image which is necessary if an exis
 - save data from a docker container to a folder on your local file system
 
 
-#### Create a Docker Image for Your Project
+### Create a Docker Image for Your Project
 - create a docker image for your project
 - what's in a docker file
 - push docker image to docker hub
