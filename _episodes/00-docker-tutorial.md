@@ -121,7 +121,7 @@ The '-p 8888:8888' links the port 8888 on your local filesystem to the port 8888
 Start a jupyter notebook from the command line of the container.
 
 ```bash
-root:/#  jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser
+root:/#  jupyter notebook --notebook-dir=/notebooks --ip='*' --port=8888 --no-browser
 ```
 The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port '8888' must match the ports in the '-p 8888:8888' flag in the `docker run` command.
 
