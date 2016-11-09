@@ -126,8 +126,8 @@ The '--notebook-dir' flag specifies the folder in the container where the jupyte
 
 <br>
 **View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888**
-
-<br>   
+<br>  <br>
+ 
 ### Deleting Docker Containers and Images
 To remove a single docker container:   
 
