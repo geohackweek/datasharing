@@ -25,11 +25,22 @@ Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub1.png)
 
+
+Enter "geohackweek" in the search box:
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub2.png)
 
+You will see a list of repositories, click on geohackweek2016/vectortutorial:
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub3.png)
 
+
+To obtain the docker image, copy the Docker Pull Command to use in your terminal:
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
+
+#### Docker Hub resources for geospatial research
+[geohackweek2016](https://hub.docker.com/u/geohackweek2016/)
+[Google Earth Engine](https://hub.docker.com/u/tylere/)
+[Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.
+[Rocker](https://hub.docker.com/u/rocker/) - R and R Studio.
 
 #### Download Docker Images
 The `docker pull` command gets the latest version of the docker image from the Docker Hub.
