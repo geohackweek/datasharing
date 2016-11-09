@@ -107,7 +107,7 @@ root:/#  jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --n
 ```
 The '--notebook-dir' flag specifies the folder in the container where the jupyter notebooks are saved.  The '--ip' flag specifies that the port is open for all ip addresses.  The '--port' specifies the port for the browser to find the jupyter notebooks.  The port '8888' must match the ports in the '-p 8888:8888' flag in the `docker run` command.
 
-View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888
+**View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888**
 
 #### Deleting Docker Containers and Images
 
@@ -128,6 +128,8 @@ $ docker rmi -f geohackweek2016/arraystutorial
 ```
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
+***
+***
 #### Linking Data Volumes
 
 
