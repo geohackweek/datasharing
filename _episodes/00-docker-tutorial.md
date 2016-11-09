@@ -47,8 +47,7 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 [Google Earth Engine](https://hub.docker.com/u/tylere/)   
 [Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
 [Rocker](https://hub.docker.com/u/rocker/) - R and R Studio.
-<br> <br>
-  
+<br> <br>   
 ### Download Docker Images
 The `docker pull` command gets the latest version of the docker image from the Docker Hub.   
 
@@ -108,7 +107,7 @@ $ docker ps -a
 ```
 <br>  <br>
   
-### Docker Containers Work With Jupyter Notebooks
+### Docker Containers Work with Jupyter Notebooks
 The following command will start a new container with the ports open for jupyter notebooks.   
 
 ```bash
