@@ -19,8 +19,8 @@ keypoints:
 
 ### Install Docker
 These instructions assume that Docker has already been installed on your computer.  If Docker has not been installed, follow these [instructions](https://geohackweek.github.io/preliminary/01-install-docker).
-
-<br>   
+<br> <br>
+   
 ### Find Docker Images
 Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 
@@ -40,31 +40,31 @@ You will see a list of repositories, click on geohackweek2016/vectortutorial:
 To obtain the docker image, copy the Docker Pull Command to use in your terminal:
 
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
-
-<br>
+<br> <br>
+  
 ### Docker Hub resources for geospatial research
 [geohackweek2016](https://hub.docker.com/u/geohackweek2016/)   
 [Google Earth Engine](https://hub.docker.com/u/tylere/)   
 [Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
 [Rocker](https://hub.docker.com/u/rocker/) - R and R Studio.
-
-<br>   
+<br> <br>
+  
 ### Download Docker Images
 The `docker pull` command gets the latest version of the docker image from the Docker Hub.   
 
 ```bash
 $ docker pull geohackweek2016/arraystutorial
 ```
-
-<br>   
+<br> <br>
+  
 ### View Docker Images
 The `docker images` command shows you all the docker images that you have available on your local machine.   
 
 ```bash
 $ docker images
 ```
-
-<br>   
+<br> <br>
+  
 ### Create Docker Containers
 The `docker run` command starts a new **docker container** using a **docker image**.
 
@@ -81,8 +81,8 @@ Type `exit` on the command line to leave the docker container.
 ```bash
 root:/# exit
 ```
-
-<br>   
+<br> <br>
+  
 ### Start Docker Containers
 To view existing docker containers, type `docker ps -a`
 
@@ -106,8 +106,8 @@ To rename a docker container:
 $ docker rename my_container better_name
 $ docker ps -a
 ```
-
-<br>   
+<br>  <br>
+  
 ### Docker Containers work with Jupyter Notebooks
 The following command will start a new container with the ports open for jupyter notebooks.   
 
