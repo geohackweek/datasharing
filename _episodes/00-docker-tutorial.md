@@ -103,7 +103,7 @@ $ docker rm my_container
 
 To remove all docker containers:
 ```bash
-docker rm $(docker ps -a -q)
+$ docker rm $(docker ps -a -q)
 ```
 '$(docker ps -a -q)' lists all the container ids which are then removed by the `docker rm` comand.
 
