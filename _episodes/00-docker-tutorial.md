@@ -126,7 +126,7 @@ The '--notebook-dir' flag specifies the folder in the container where the jupyte
 
 <br>
 **View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888**
-<br>  
+<br>  <br>
  
 ### Deleting Docker Containers and Images
 To remove a single docker container:   
@@ -152,7 +152,7 @@ $ docker rmi -f geohackweek2016/arraystutorial
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
 <br>
-<hr size="2" style="border-color: black; color:black">   
+<hr size="3" style="border-color: black; color:black">   
 
 ### Linking Data Volumes
 
