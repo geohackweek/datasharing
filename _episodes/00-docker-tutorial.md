@@ -35,7 +35,7 @@ Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 The ```docker pull``` command gets the latest version of the docker image from the Docker Hub.
 ```bash
 $ docker pull geohackweek2016/arraystutorial
-```
+```   
 #### View Docker Images
 The ```docker images``` command shows you all the docker images that you have available on your local machine.
 
