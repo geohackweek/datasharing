@@ -112,7 +112,7 @@ $ docker ps -a
 The following command will start a new container with the ports open for jupyter notebooks.   
 
 ```bash
-$ docker run -i -t --name jupyter_container -p 8888:8888 geohackweek2016/arraystutorial
+$ docker run -i -t -p 8888:8888 --name jupyter_container geohackweek2016/arraystutorial
 ```
 The '-p 8888:8888' links the port 8888 on your local filesystem to the port 8888 in the container.
 
@@ -159,9 +159,9 @@ The '-f' flag means force the removal of the image which is necessary if an exis
 Data for the tutorials have been included in the docker images for convenience.  However, you may want to store your data on your local filesystem particularly if the data files are large.  Data outside the container can be linked to the container using the following commmand:
 
 ```bash
-$ docker run -i -t -v /Users/Home/Data/:/data geohackweek2016/arraystutorial 
+$ docker run -i -t -v /Users/Home/Data/:/data --name my_container geohackweek2016/arraystutorial 
 ```
-"/Users/Home/Data/" is the filepath the data directory on your local filesystem. "/data" is the filepath to the folder in your container where the data will be linked. Note that data in the "/data" folder will be overwritten by the data from your local filesystem.  The '-v' flag specifies that you are linking a data volume.  **Any changes to the data made in the container will be propogated to the data on your local filesystem.** 
+"/Users/Home/Data/" is the filepath the data directory on your local filesystem. "/data" is the filepath to the folder in your container where the data will be linked. Note that any data in the "/data" folder will be replaced by the data from your local filesystem.  The '-v' flag specifies that you are linking a data volume.  **Any changes to the data made in the container will be propogated to the data on your local filesystem.** 
 
 <br>
 Copy from a container to your local filesystem.
@@ -172,6 +172,42 @@ $ docker cp my_container:/file/path/within/container /host/path/target
 <br>  
 
 ### Create a Docker Image for Your Project
-- create a docker image for your project
-- what's in a docker file
-- push docker image to docker hub
+Docker images are built based on on commands contained in a [Dockerfile](https://github.com/geohackweek/nDarrays/blob/gh-pages/docker/Dockerfile).
+
+This is the contents of the Dockerfile for the nDarrays tutorial:
+
+```
+FROM continuumio/anaconda3
+RUN apt-get install -y tar git curl nano wget dialog net-tools build-essential
+RUN apt-get -y install pyqt4-dev-tools
+RUN mkdir /data
+RUN conda install matplotlib
+RUN conda install pandas
+RUN conda install numpy
+RUN conda install xarray
+RUN conda install dask
+RUN conda install netcdf4
+RUN conda install jupyter
+RUN mkdir /opt/notebooks
+COPY /data/ /data
+```
+
+This Dockerfile is based on the anaconda python 3.x distribution from continuumio [available on Docker Hub](https://hub.docker.com/r/continuumio/anaconda3/).  Some additional packages are added using `apt-get install` and `conda install`.  Data are copied into a folder in the docker image using `COPY /data/ /data`.  This data will be permanently included in the docker image.  A drawback to including data in the docker image is that the docker image will need more disk space.   
+  
+A Dockerfile is used to create an image using the following command in the folder with the Dockerfile: 
+
+```bash
+$ docker build -t geohackweek2016/new_dockerimage .  
+```
+
+The docker image can be pushed to the Docker Hub. First, login using your Docker Hub username and password. 
+
+```bash
+$ docker login
+```
+
+Then push the image to Docker Hub. 
+```bash
+$ docker push geohackweek2016/new_dockerimage
+```
+If you want to be added to the Docker Hub team for geohackweek2016 (and have push access), please contact the organizers, and we will add you.
