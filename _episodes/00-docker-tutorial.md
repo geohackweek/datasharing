@@ -17,10 +17,12 @@ keypoints:
 
 ---
 
-#### Install Docker
+
+### Install Docker
 These instructions assume that Docker has already been installed on your computer.  If Docker has not been installed, follow these [instructions](https://geohackweek.github.io/preliminary/01-install-docker).
 
-#### Find Docker Images
+
+### Find Docker Images
 Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub1.png)
@@ -40,24 +42,30 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub4.png)
 
-#### Docker Hub resources for geospatial research
+
+### Docker Hub resources for geospatial research
 [geohackweek2016](https://hub.docker.com/u/geohackweek2016/)   
 [Google Earth Engine](https://hub.docker.com/u/tylere/)   
 [Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
 [Rocker](https://hub.docker.com/u/rocker/) - R and R Studio.
 
-#### Download Docker Images
+
+### Download Docker Images
 The `docker pull` command gets the latest version of the docker image from the Docker Hub.
 ```bash
 $ docker pull geohackweek2016/arraystutorial
 ```
-#### View Docker Images
+
+
+### View Docker Images
 The `docker images` command shows you all the docker images that you have available on your local machine.
 
 ```bash
 $ docker images
 ```
-#### Create Docker Containers
+
+
+### Create Docker Containers
 The `docker run` command starts a new **docker container** using a **docker image**.
 
 A **docker image** is a filesystem and parameters to use at runtime. It doesn’t have state and never changes. A **docker container** is a running instance of an image.
@@ -72,7 +80,8 @@ Type `exit` on the command line to leave the docker container.
 root:/# exit
 ```
 
-#### Start Docker Containers
+
+### Start Docker Containers
 To view existing docker containers, type `docker ps -a`
 
 ```bash
@@ -92,7 +101,8 @@ $ docker rename my_container better_name
 $ docker ps -a
 ```
 
-#### Docker Containers work with Jupyter Notebooks
+
+### Docker Containers work with Jupyter Notebooks
 
 The following command will start a new container with the ports open for jupyter notebooks.
 ```bash
@@ -109,7 +119,8 @@ The '--notebook-dir' flag specifies the folder in the container where the jupyte
 
 **View the jupyter notebooks by opening an internet browser on your local filesystem and entering the address as http://localhost:8888**
 
-#### Deleting Docker Containers and Images
+
+### Deleting Docker Containers and Images
 
 To remove a single docker container:
 ```bash
@@ -128,9 +139,10 @@ $ docker rmi -f geohackweek2016/arraystutorial
 ```
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
-***
-***
-#### Linking Data Volumes
+
+***   
+
+### Linking Data Volumes
 
 
 - access local data within a docker container
