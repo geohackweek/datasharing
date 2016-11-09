@@ -189,7 +189,7 @@ RUN conda install xarray
 RUN conda install dask
 RUN conda install netcdf4
 RUN conda install jupyter
-RUN mkdir /opt/notebooks
+RUN mkdir /notebooks
 COPY /data/ /data
 ```
 
