@@ -152,7 +152,7 @@ $ docker rmi -f geohackweek2016/arraystutorial
 The '-f' flag means force the removal of the image which is necessary if an existing docker container was based on the image.  The docker container still functions after the docker image is removed.
 
 <br>
-<hr COLOR="black">   
+<hr COLOR="red">   
 
 ### Linking Data Volumes
 
