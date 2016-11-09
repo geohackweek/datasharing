@@ -6,7 +6,7 @@ exercises: 0
 questions:
 - "How to use Docker?"
 objectives:
-- "Use Docker Hub"
+- "Use Docker Hub to Find Docker Images"
 - "Run a Docker Container"
 - "Use Jupyter Notebooks with a Docker Container"
 - "Delete a Docker Containers and Images"
