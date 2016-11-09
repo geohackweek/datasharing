@@ -18,12 +18,10 @@ keypoints:
 
 
 ### Install Docker
-<br>
 These instructions assume that Docker has already been installed on your computer.  If Docker has not been installed, follow these [instructions](https://geohackweek.github.io/preliminary/01-install-docker).
 
 
 ### Find Docker Images
-<br>
 Existing docker images are available on [Docker Hub](https://hub.docker.com/).
 
 ![Docker Hub](https://raw.githubusercontent.com/geohackweek/Introductory/gh-pages/assets/img/dockertutorial/DockerHub1.png)
@@ -45,7 +43,6 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 
 
 ### Docker Hub resources for geospatial research
-<br>
 [geohackweek2016](https://hub.docker.com/u/geohackweek2016/)   
 [Google Earth Engine](https://hub.docker.com/u/tylere/)   
 [Anaconda](https://hub.docker.com/u/continuumio/) - The Anaconda Python Distribution.   
@@ -53,7 +50,6 @@ To obtain the docker image, copy the Docker Pull Command to use in your terminal
 
 
 ### Download Docker Images
-<br>
 The `docker pull` command gets the latest version of the docker image from the Docker Hub.   
 
 ```bash
@@ -62,7 +58,6 @@ $ docker pull geohackweek2016/arraystutorial
 
 
 ### View Docker Images
-<br>
 The `docker images` command shows you all the docker images that you have available on your local machine.   
 
 ```bash
@@ -90,7 +85,6 @@ root:/# exit
 
 
 ### Start Docker Containers
-<br>
 To view existing docker containers, type `docker ps -a`
 
 ```bash
@@ -116,7 +110,6 @@ $ docker ps -a
 
 
 ### Docker Containers work with Jupyter Notebooks
-<br>
 The following command will start a new container with the ports open for jupyter notebooks.   
 
 ```bash
