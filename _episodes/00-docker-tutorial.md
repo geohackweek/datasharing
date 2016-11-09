@@ -210,7 +210,9 @@ $ docker login
 
 <br>
 Then push the image to Docker Hub. 
+
 ```bash
 $ docker push geohackweek2016/new_dockerimage
 ```
+
 If you want to be added to the Docker Hub team for geohackweek2016 (and have push access), please contact the organizers, and we will add you.
