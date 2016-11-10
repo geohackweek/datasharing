@@ -28,6 +28,12 @@ Similar to [pip](https://pypi.python.org/pypi/pip), [**conda**](http://conda.pyd
 
 #### What is Miniconda?
 Unlike Anaconda, Miniconda doesn't come with any installed packages by default.
+Note that for miniconda, everytime you open up a terminal, `conda` won't automatically be available. Run the command below to use conda within miniconda.
+
+~~~
+$ export PATH=$HOME/miniconda2/bin:$PATH
+~~~
+{: .bash}
 
 > ## What I'm using for this tutorial?
 >
@@ -53,7 +59,7 @@ conda 4.2.12
 
 > ## Conda Help and Manual
 >
-> To see the full documentation for any command, type the command followed by --help. For example, to learn about the conda update command:
+> To see the full documentation for any command, type the command followed by `--help`. For example, to learn about the conda update command:
 >
 > ~~~
 > $ conda update --help
@@ -136,12 +142,13 @@ There are two ways of creating a conda environment.
 ##### Creating environment with an environment file.
 
 YAML? What's that?
+
 - YAML stands for YAML Ain't Markup Language
 - It is a human friendly data serialization standard for all programming languages.
 
 > ## An example of environment file (`environment.yml`)
 >
-> This is an example of an environment file that will install python 2.7, python-pip, and gsconfig library from pip.
+> This is an example of an environment file that will install `python 2.7`, `python-pip`, and `gsconfig` library using pip.
 > The new version of Conda is friendly with pip, so if some packages are not found in Anaconda Cloud, then
 > you can install them with `pip install`
 >
@@ -580,7 +587,14 @@ Some packages might not be available in conda, but it is available in [pypi](htt
 
 ![Search in Anaconda Cloud](../fig/Anaconda_cloud_rasterio_listing.png)
 
-It is important to be careful when downloading any packages from an untrusted source. [Conda forge](https://conda-forge.github.io/) is a reliable source for many popular python packages. 
+> ## Anaconda Cloud and Trusted Sources
+>
+> **Anaconda Cloud** is a package management service that makes it easy to find, access, store and share public and private notebooks, environments, and conda and PyPI packages, and to keep up with updates made to the packages and environments you’re using (Ref. [Anaconda Cloud Doc](https://docs.continuum.io/anaconda-cloud/)). 
+> Anaconda Cloud is made up of channels/owners. Each channels contains one or more conda packages. 
+>
+> It is important to be careful when downloading any packages from an untrusted source. [Conda forge](https://conda-forge.github.io/) is a reliable source for many popular python packages. It is wise to research about the source of a conda package.
+>
+{: .callout}
 
 In this example, we will use rasterio from conda-forge. The anaconda cloud page for rasterio will show how to install the package, compatible OS, individual files for that package, etc.
 
@@ -696,6 +710,23 @@ Linking packages ...
 ~~~
 {: .output}
 
+> ## Pre-configuring Channels
+>
+> If you have a few trusted channels that you prefer to use, you can pre-configure these so that everytime you are creating an environment, you won't need to explicitly declare the channel. 
+>
+> ~~~
+> $ conda config --add channels conda-forge
+> ~~~
+> {: .bash}
+>
+> For miniconda, in order for your channels information to be exported into an environment file, you have to pre-configure your desired channels or add them during export.
+>
+> ~~~
+> $ conda env export -f myenv.yml -c conda-forge -c defaults --override-channels
+> ~~~
+> {: .bash}
+{: .callout}
+
 #### Removing Conda Package
 
 We decided that rasterio is not needed in this tutorial, so we will remove it from `test_env`. Note that this will only remove the main package rasterio, not its dependencies.
@@ -723,4 +754,13 @@ Unlinking packages ...
 ~~~
 {: .output}
 
-For further commands about managing an environment go to link [here](http://conda.pydata.org/docs/using/envs.html)
+For lots more feature of conda, check out the documentation [here](http://conda.pydata.org/docs/index.html)
+
+## RECAP
+### Why should we use conda?
+
+- It has a way to solve version dependencies
+- Reproducible environments can be created easily
+- Most conda packages are friendly across all platforms
+
+http://technicaldiscovery.blogspot.com.br/2013/12/why-i-promote-conda.html
