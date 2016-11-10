@@ -1,6 +1,6 @@
 ---
 
-title: "Getting Started with Conda"
+title: "Introduction to Conda"
 teaching: 15
 exercises: 0
 questions:
