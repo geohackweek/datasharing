@@ -757,10 +757,11 @@ Unlinking packages ...
 For lots more feature of conda, check out the documentation [here](http://conda.pydata.org/docs/index.html)
 
 ## RECAP
+
 ### Why should we use conda?
 
 - It has a way to solve version dependencies
 - Reproducible environments can be created easily
 - Most conda packages are friendly across all platforms
 
-http://technicaldiscovery.blogspot.com.br/2013/12/why-i-promote-conda.html
+If you're not convinced of using conda, read this great blog [here](http://technicaldiscovery.blogspot.com.br/2013/12/why-i-promote-conda.html)
