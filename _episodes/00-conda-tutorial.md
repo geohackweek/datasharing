@@ -10,7 +10,7 @@ objectives:
 - explore how most people currently install and manage python libraries
 - discuss how current methods causes headaches in managing the vast libraries for various projects
 keypoints:
-- conda can be installed in two ways: Anaconda and Miniconda
+- conda can be installed in two ways (Anaconda and Miniconda)
 - conda package manager works across systems
 - projects can be separated by individual environments
 - this tool will save headaches when trying to install packages with dependancies or managing multiple libraries/projects
@@ -18,7 +18,9 @@ keypoints:
 ---
 
 ## Review from Preliminary
+
 #### What is Conda?
+
 Similar to [pip](https://pypi.python.org/pypi/pip), [**conda**](http://conda.pydata.org/docs/) is an **open source package and environment management system**.
 
 #### What is Anaconda?
@@ -204,19 +206,18 @@ From the output above, the instruction highlighted ways to activate and deactiva
 
 Use an environment:
 
-Linux, OS X: `$ source activate bunnies`
-Windows: `$ activate bunnies`
+- Linux, OS X: `$ source activate bunnies`
+- Windows: `$ activate bunnies`
 
 Deactivate an environment (goes back to root):
 
+- Linux, OS X: `$ source deactivate`
+- Windows: `$ deactivate`
 
-Linux, OS X: `$ source deactivate`
-Windows: `$ deactivate`
-
-##### Creating environment by manually specifying packages.
+#### Creating environment by manually specifying packages.
 
 We can create `test_env` conda environment by specifying the name, channel, and list of packages within the terminal window.
-In the example below, I am creating the `test_env` environment that uses python 2.7 and a list of libraries: `numpy`, `matplotlib`, `pandas`*[]: 
+In the example below, I am creating the `test_env` environment that uses python 2.7 and a list of libraries: `numpy`, `matplotlib`, `pandas`.
 
 
 ~~~
@@ -311,7 +312,8 @@ Linking packages ...
 >
 > The `(test_env)` in the beginning of the line indicates that I'm curently using the `test_env` conda environment.
 >
-> Another way that you can check for your current active environment is a command: 
+> Another way that you can check for your current active environment is a command:
+>
 > ~~~
 > $ conda info --envs
 > ~~~
@@ -340,83 +342,102 @@ channels:
 - conda-forge
 - defaults
 dependencies:
-- cligj=0.4.0=py27_0
-- conda-forge::affine=2.0.0.post1=py27_0
-- conda-forge::blas=1.1=openblas
-- conda-forge::ca-certificates=2016.9.26=0
-- conda-forge::certifi=2016.9.26=py27_0
-- conda-forge::click=6.6=py27_1
-- conda-forge::click-plugins=1.0.3=py27_0
-- conda-forge::curl=7.49.1=1
-- conda-forge::cycler=0.10.0=py27_0
-- conda-forge::enum34=1.1.6=py27_1
-- conda-forge::expat=2.1.0=2
-- conda-forge::freetype=2.6.3=1
-- conda-forge::freexl=1.0.2=1
-- conda-forge::functools32=3.2.3.2=py27_1
-- conda-forge::gdal=1.11.4=np111py27_10
-- conda-forge::geos=3.4.2=2
-- conda-forge::giflib=5.1.4=0
-- conda-forge::hdf4=4.2.12=0
-- conda-forge::hdf5=1.8.17=7
-- conda-forge::icu=56.1=4
-- conda-forge::jasper=1.900.1=3
-- conda-forge::jpeg=9b=0
-- conda-forge::json-c=0.12=0
-- conda-forge::krb5=1.14.2=0
-- conda-forge::libgfortran=3.0.0=0
-- conda-forge::libiconv=1.14=3
-- conda-forge::libnetcdf=4.4.1=0
-- conda-forge::libpng=1.6.26=0
-- conda-forge::libspatialite=4.3.0a=11
-- conda-forge::libtiff=4.0.6=7
-- conda-forge::libxml2=2.9.4=3
-- conda-forge::matplotlib=1.5.3=np111py27_2
-- conda-forge::ncurses=5.9=9
-- conda-forge::numpy=1.11.2=py27_blas_openblas_200
-- conda-forge::openblas=0.2.18=6
-- conda-forge::openjpeg=2.1.2=1
-- conda-forge::openssl=1.0.2h=2
-- conda-forge::pandas=0.19.1=np111py27_0
-- conda-forge::pip=9.0.0=py27_0
-- conda-forge::postgresql=9.5.4=2
-- conda-forge::proj.4=4.9.3=0
-- conda-forge::proj4=4.9.3=0
-- conda-forge::pyparsing=2.1.10=py27_0
-- conda-forge::python=2.7.12=1
-- conda-forge::python-dateutil=2.5.3=py27_0
-- conda-forge::pytz=2016.7=py27_0
-- conda-forge::rasterio=0.35.1=np111py27_1
-- conda-forge::readline=6.2=0
-- conda-forge::setuptools=28.7.0=py27_0
-- conda-forge::six=1.10.0=py27_1
-- conda-forge::snuggs=1.4.0=py27_0
-- conda-forge::sqlite=3.13.0=1
-- conda-forge::tk=8.5.19=0
-- conda-forge::wheel=0.29.0=py27_0
-- conda-forge::xerces-c=3.1.4=2
-- conda-forge::xz=5.2.2=0
-- conda-forge::zlib=1.2.8=3
+- cligj=0.4.0
+- conda-forge::affine=2.0.0.post1
+- conda-forge::blas=1.1
+- conda-forge::boto3=1.4.1
+- conda-forge::botocore=1.4.49
+- conda-forge::ca-certificates=2016.9.26
+- conda-forge::certifi=2016.9.26
+- conda-forge::click=6.6
+- conda-forge::click-plugins=1.0.3
+- conda-forge::curl=7.49.1
+- conda-forge::cycler=0.10.0
+- conda-forge::docutils=0.12
+- conda-forge::enum34=1.1.6
+- conda-forge::expat=2.1.0
+- conda-forge::freetype=2.6.3
+- conda-forge::freexl=1.0.2
+- conda-forge::functools32=3.2.3.2
+- conda-forge::futures=3.0.5
+- conda-forge::gdal=2.1.2
+- conda-forge::geos=3.4.2
+- conda-forge::giflib=5.1.4
+- conda-forge::hdf4=4.2.12
+- conda-forge::hdf5=1.8.17
+- conda-forge::icu=56.1
+- conda-forge::jasper=1.900.1
+- conda-forge::jmespath=0.9.0
+- conda-forge::jpeg=9b
+- conda-forge::json-c=0.12
+- conda-forge::kealib=1.4.6
+- conda-forge::krb5=1.14.2
+- conda-forge::libdap4=3.18.2
+- conda-forge::libgfortran=3.0.0
+- conda-forge::libiconv=1.14
+- conda-forge::libnetcdf=4.4.1
+- conda-forge::libpng=1.6.26
+- conda-forge::libpq=9.5.4
+- conda-forge::libspatialite=4.3.0a
+- conda-forge::libtiff=4.0.6
+- conda-forge::libxml2=2.9.4
+- conda-forge::matplotlib=1.5.3
+- conda-forge::ncurses=5.9
+- conda-forge::numpy=1.11.2
+- conda-forge::openblas=0.2.18
+- conda-forge::openjpeg=2.1.2
+- conda-forge::openssl=1.0.2h
+- conda-forge::pandas=0.19.1
+- conda-forge::patsy=0.4.1
+- conda-forge::pip=9.0.0
+- conda-forge::postgresql=9.5.4
+- conda-forge::proj.4=4.9.3
+- conda-forge::proj4=4.9.3
+- conda-forge::pyparsing=2.1.10
+- conda-forge::python=2.7.12
+- conda-forge::python-dateutil=2.5.3
+- conda-forge::pytz=2016.7
+- conda-forge::readline=6.2
+- conda-forge::s3transfer=0.1.8
+- conda-forge::scipy=0.18.1
+- conda-forge::setuptools=28.7.0
+- conda-forge::six=1.10.0
+- conda-forge::snuggs=1.4.0
+- conda-forge::sqlite=3.13.0
+- conda-forge::statsmodels=0.6.1
+- conda-forge::tk=8.5.19
+- conda-forge::wheel=0.29.0
+- conda-forge::xerces-c=3.1.4
+- conda-forge::xz=5.2.2
+- conda-forge::zlib=1.2.8
 - pip:
   - affine==2.0.0.post1
+  - boto3==1.4.1
+  - botocore==1.4.49
   - certifi==2016.9.26
   - click==6.6
   - click-plugins==1.0.3
   - cycler==0.10.0
+  - docutils==0.12
   - enum34==1.1.6
   - functools32==3.2.3.post2
-  - gdal==1.11.4
+  - futures==3.0.5
+  - gdal==2.1.2
+  - jmespath==0.9.0
   - matplotlib==1.5.3
   - numpy==1.11.2
   - pandas==0.19.1
+  - patsy==0.4.1
   - pip==9.0.1
   - pyparsing==2.1.10
   - python-dateutil==2.5.3
   - pytz==2016.7
-  - rasterio==0.35.1
+  - s3transfer==0.1.8
+  - scipy==0.18.1
   - setuptools==28.7.0.post20161109
   - six==1.10.0
   - snuggs==1.4.0
+  - statsmodels==0.6.1
   - wheel==0.29.0
 prefix: //anaconda/envs/test_env
 ~~~
