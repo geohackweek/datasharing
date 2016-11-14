@@ -71,12 +71,14 @@ The `docker run` command starts a new **docker container** using a **docker imag
 
 A **docker image** is a filesystem and parameters to use at runtime. It doesn’t have state and never changes. A **docker container** is a running instance of an image.
 
-**Mac OSX and Linux**   
+**Mac OSX and Linux** 
+    
 ```bash
 $ docker run -i -t --name my_container geohackweek2016/arraystutorial
 ```
 
 **Windows**   
+
 ```bash
 $ docker run -it --name my_container geohackweek2016/arraystutorial
 ```
@@ -103,11 +105,13 @@ The '-a' flag specifies that you want to see all the containers.
 To start an existing docker container named 'my_container':   
 
 **Mac OS X and Linux**
+
 ```bash
 $ docker start -a -i my_container
 ```
 
 **Windows**
+
 ```bash
 $ docker start -ai my_container
 ```
@@ -125,12 +129,14 @@ $ docker ps -a
 ### Docker Containers Work with Jupyter Notebooks
 The following command will start a new container with the ports open for jupyter notebooks.   
 
-**Mac OS X and Linux**   
+**Mac OS X and Linux**  
+ 
 ```bash
 $ docker run -i -t -p 8888:8888 --name jupyter_container geohackweek2016/arraystutorial
 ```
 
 **Windows**   
+
 ```bash
 $ docker run -itp 8888:8888 --name jupyter_container geohackweek2016/arraystutorial
 ```
@@ -159,11 +165,13 @@ $ docker rm my_container
 To remove all docker containers:   
 
 **Mac OS X and Linux**   
+
 ```bash
 $ docker rm $(docker ps -a -q)
 ```
 
 **Windows**   
+
 ```bash
 $ docker rm $(docker ps -aq)
 ```
@@ -184,7 +192,8 @@ The '-f' flag means force the removal of the image which is necessary if an exis
 
 Data for the tutorials have been included in the docker images for convenience.  However, you may want to store your data on your local filesystem particularly if the data files are large.  Data outside the container can be linked to the container using the following commmand:
 
-**Mac OS X and Linux**
+**Mac OS X and Linux**   
+
 ```bash
 $ docker run -i -t -v /Users/Home/Data/:/data --name my_container geohackweek2016/arraystutorial 
 ```
