@@ -20,6 +20,7 @@ You will need a [Github](http://www.github.com) account for authentication.
 Here is an amazing slide deck about Jupyterhub: [JupyterHub Thing Explainer](https://www.slideshare.net/willingc/jupyterhub-a-thing-explainer-overview)
 
 If you're lazy, here is one slide: 
+
 ![thingexplainer](../fig/jupyterhub_thing_explain.jpg)
 
 ## JupyterHub for GeohackWeek
