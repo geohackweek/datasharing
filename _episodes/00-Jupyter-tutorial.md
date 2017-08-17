@@ -11,16 +11,23 @@ keypoints:
 
 ---
 
-## JupyterHub
+## JupyterHub Access
+The JupyterHub for GeohackWeek is accessible at: https://jupyterhub.cloudmaven.org
 
-Here is a conceptual graphic of our cloud-based JupyterHub environment for geohackweek:
+You will need a [Github](http://www.github.com) account for authentication. 
 
-![gehoackweek_setup](../fig/Geohackweek_setup.png)
+## JupyterHub What Is
+Here is an amazing slide deck about Jupyterhub: [JupyterHub Thing Explainer](https://www.slideshare.net/willingc/jupyterhub-a-thing-explainer-overview)
 
-<br>
-<br>
-<br>
+If you're lazy, here is one slide: 
+![thingexplainer](../fig/jupyterhub_thing_explain.jpg)
 
-Here is a diagram of the typical implementation of Python on your local machine:
+## JupyterHub for GeohackWeek
 
-![local_setup](../fig/jupyter_setup.png)
+
+This is a conceptual graphic of our cloud-based JupyterHub environment for geohackweek:
+
+![geohackweek_setup](../fig/geohackweek_aws_setup.png)
+
+
+
