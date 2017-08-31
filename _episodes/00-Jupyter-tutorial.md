@@ -30,5 +30,11 @@ This is a conceptual graphic of our cloud-based JupyterHub environment for geoha
 
 ![geohackweek_setup](../fig/geohackweek_aws_setup.png)
 
+## Jupyter Notebook
+
+- A Jupyter Notebook App is a web application for running and sharing notebook documents. 
+- A notebook document can contain code and other elements that are executable via a kernel. It can also contain rich text and figures.
+- A kernel executes the code in a notebook document. A kernel can be an environment. 
+
 
 
