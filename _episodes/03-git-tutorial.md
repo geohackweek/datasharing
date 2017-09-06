@@ -1,7 +1,7 @@
 ---
 
 title: "Getting Started with Git"
-teaching: 15
+teaching: 60
 exercises: 0
 questions:
 - "What is Git and Github?"
