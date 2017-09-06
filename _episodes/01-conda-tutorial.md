@@ -1,7 +1,7 @@
 ---
 
 title: "Introduction to Conda"
-teaching: 15
+teaching: 45
 exercises: 0
 questions:
 - "What is Conda?"
