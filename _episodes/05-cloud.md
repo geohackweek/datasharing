@@ -12,11 +12,12 @@ keypoints:
 ---
 
 ## Cloud computing fundamentals
+### Benefits of cloud computing 
 - On-demand, shared and configurable pool of resources
 - Rapidly provisioned
 - Highly scalable
 
-## Types of cloud computing services
+### Types of cloud computing services
 - Infrastructure as a service (IaaS)
   - E.g. virtual machines with operating systems, like traditional servers
   
@@ -29,12 +30,16 @@ keypoints:
 
 - Data as a service
   - Collected data is shared in human readable form 
-  
-  ## Examples of Geospatial applications on the Cloud
-  - Web frameworks with API (AralDIF/NicaDIF/HiMAT)
-  - Geoserver for data sharing 
-  
-  ## How JupyterHub works 
-  -  
 
+**Definitions are becoming less relevant**
 
+## Important things to think about 
+- How do I choose a cloud provider? (e.g. AWS, Azure, Google Cloud Platform)
+- Costing
+- Continuous, integrated delivery (build-test-share)
+  - Use Github for collaboration and coordination
+
+## Examples of Applications on the Cloud with a Geospatial focus
+- Web frameworks with API (AralDIF/NicaDIF/HiMAT)
+- Geoserver for data sharing 
+- Jupyterhub
