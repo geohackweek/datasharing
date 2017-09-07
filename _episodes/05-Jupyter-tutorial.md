@@ -28,7 +28,7 @@ Here is an amazing slide deck about Jupyterhub: [JupyterHub Thing Explainer](htt
 
 If you're lazy, here is one slide: 
 
-![thingexplainer](../fig/jupyterhub_thing_explain.jpg)
+![thingexplainer](../fig/jupyterhub_thexport PATH=~/opt/bin:$PATHing_explain.jpg)
 
 ## JupyterHub for GeohackWeek
 
@@ -37,3 +37,37 @@ This is a conceptual graphic of our cloud-based JupyterHub environment for geoha
 ![geohackweek_setup](../fig/geohackweek_aws_setup.png)
 
 - AWS EC2 instance, Github authentication, multiple spawns 
+
+## Initial Setup
+
+### Paths and folders
+Open a new Jupyter Notebook terminal. If you type `conda`, you will get a conda usage guide:
+
+``` usage: conda [-h] [-V] command ... ```
+
+If you get "conda: command not found", you will need to add the conda path to your bash profile by exporting the path:
+``` export PATH=/opt/anaconda/bin:$PATH ```
+
+Next, we are going to clone the Git repository we will be using for the tutorials this week. You will need to clone this into the 'notebooks' folder in your home directory. 
+
+``` 
+$ ls # check your present working directory and list available files and folders
+$ cd notebooks # change directory to notebooks
+$ pwd # check present working directory again, it should say something like /home/user/notebooks
+$ git clone 'https://github.com/geohackweek/tutorial_contents.git'
+$ ls # check that the folder is there
+```
+
+![geohackweek_jupyterhub_gitclone](../fig/jupyterhub_gitclone.png)
+
+
+### Notebooks and environments
+1. Return to the Jupyterhub home tab
+2. You should now see tutorial_contents as a folder
+3. We will test out setting environments for our notebooks. 
+   - Change directories to tutorial_contents > vector > notebooks 
+   - Select geopandas_advanced.ipynb
+   - You will be prompted to select a kernel. Select the Vectorenv kernel. 
+
+![geohackweek_jupyterhub_kernel](../fig/jupyterhub_kernel.png)
+   
