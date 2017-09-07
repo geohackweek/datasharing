@@ -41,7 +41,11 @@ This is a conceptual graphic of our cloud-based JupyterHub environment for geoha
 ## Initial Setup
 
 ### Paths and folders
-Open a new Jupyter Notebook terminal. If you type `conda`, you will get a conda usage guide:
+Open a new Jupyter Notebook terminal. 
+
+![geohackweek_jupyterhub_terminal](../fig/jupyterhub_terminal.png)
+
+If you type `conda`, you will get a conda usage guide:
 
 ``` usage: conda [-h] [-V] command ... ```
 
