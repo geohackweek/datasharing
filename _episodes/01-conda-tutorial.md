@@ -11,9 +11,11 @@ objectives:
 - discuss how current methods causes headaches in managing the vast libraries for various projects
 keypoints:
 - conda can be installed in two ways (Anaconda and Miniconda)
-- conda package manager works across systems
+- this tool will prevent headaches when trying to install packages with dependancies or managing multiple libraries/projects
 - projects can be separated by individual environments
-- this tool will save headaches when trying to install packages with dependancies or managing multiple libraries/projects
+- Reproducible environments can be created easily
+- Most conda packages are friendly across all platforms
+- If you're not convinced about using conda, read [this great blog](http://technicaldiscovery.blogspot.com.br/2013/12/why-i-promote-conda.html)
 
 ---
 
@@ -202,8 +204,8 @@ From the output above, the instruction highlighted ways to activate and deactiva
 
 Use an environment:
 
-- Linux, OS X: `$ source activate bunnies`
-- Windows: `$ activate bunnies`
+- Linux, OS X: `$ source activate playenv`
+- Windows: `$ activate playenv`
 
 Deactivate an environment (goes back to root):
 
@@ -268,27 +270,27 @@ $ conda env export -f test_env.yml -n test_env
 ~~~
 {: .bash}
 
-This will export a very detailed environment file that you can share with other.
+This will export a very detailed environment file that you can share with others.
 This file specifies the `package=version=build`.
-This environment file will not work to share across platform, since the builds and versions might be different.
+Note that this environment file will not work to share across platforms, since the builds and versions might be different for different operating systems.
 
 > ## Best practice to share environments
 >
-> 1. Always start from an environment file.
-> 2. As you add packages to the environment, be sure to update the file.
-> 3. Try not to hardwire versions so you will always have the most up to date version and works across platform, *unless you have to*.
+> 1. When starting a new environment, always generate it from an environment file rather than the command line.
+> 2. As you add packages to the environment, be sure to update the environment file.
+> 3. Unless you have to, try to avoid specifying the version of each package. This will ensure you have the most up to date version that will work across platform.
 >
 > If you follow these guidelines, you should be able to give your environment file to anyone,
 > and they will be able to install your packages with no problem.
 {: .callout}
 
 ---
-### Making an exact copy of an environment and deleting environment
+### Making an exact copy of an environment and deleting environments
 
 #### Copying an environment
 
 We can make an exact copy of an environment to an environment with a different name.
-This maybe useful for any testing vs live environments or python 2.7 vs python 3.6 for the same packages.
+This maybe useful for any testing versus live environments or python 2.7 vs python 3.6 for the same packages.
 In this example, `test_env` is cloned to create `live_env`.
 
 ~~~
@@ -299,7 +301,7 @@ $ conda create --name live_env --clone test_env
 #### Deleting an environment
 
 Deleting an environment is very easy using conda.
-Since we are only testing out our environment, we will delete `live_env` to de-clutter ourselves. *Make sure that you are not currently using `live_env`.*
+Since we are only testing out our environment, we will delete `live_env` to remove some clutter. *Make sure that you are not currently using `live_env`.*
 
 ~~~
 $ conda env remove -n live_env
@@ -340,7 +342,7 @@ libgfortran               3.0.0                         0    conda-forge
 
 #### Searching for a certain package
 
-Some packages might not be available in conda, but it is available in [pypi](https://pypi.python.org/pypi). For example, we will search for rasterio within the [anaconda cloud](https://anaconda.org/).
+Some packages might not be available in conda, but are available in [pypi](https://pypi.python.org/pypi). For example, we will search for rasterio within the [anaconda cloud](https://anaconda.org/).
 *It is not necessary to create an account with anaconda cloud, unless you'd like to contribute in the future when you are pro with conda.*
 
 ![Search in Anaconda Cloud](../fig/Anaconda_cloud_rasterio_listing.png)
@@ -450,13 +452,3 @@ Unlinking packages ...
 {: .output}
 
 For lots more feature of conda, check out the documentation [here](http://conda.pydata.org/docs/index.html)
-
-## RECAP
-
-### Why should we use conda?
-
-- It has a way to solve version dependencies
-- Reproducible environments can be created easily
-- Most conda packages are friendly across all platforms
-
-If you're not convinced of using conda, read this great blog [here](http://technicaldiscovery.blogspot.com.br/2013/12/why-i-promote-conda.html)
