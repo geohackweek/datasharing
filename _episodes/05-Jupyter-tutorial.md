@@ -28,7 +28,7 @@ Here is an amazing slide deck about Jupyterhub: [JupyterHub Thing Explainer](htt
 
 If you're lazy, here is one slide: 
 
-![thingexplainer](../fig/jupyterhub_thexport PATH=~/opt/bin:$PATHing_explain.jpg)
+![thingexplainer](../fig/jupyterhub_thing_explain.jpg)
 
 ## JupyterHub for GeohackWeek
 
@@ -58,7 +58,7 @@ $ git clone 'https://github.com/geohackweek/tutorial_contents.git'
 $ ls # check that the folder is there
 ```
 
-![geohackweek_jupyterhub_gitclone](../fig/jupyterhub_gitclone.png)
+![geohackweek_jupyterhub_gitclone](../fig/jupyterhub_githubclone.png)
 
 
 ### Notebooks and environments
