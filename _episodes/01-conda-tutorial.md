@@ -1,11 +1,11 @@
 ---
 
 title: "Introduction to Conda"
-teaching: 45
+teaching: 15
 exercises: 0
 questions:
 - "What is Conda?"
-- "How can I use conda in managing all the libraries for my projects" 
+- "How can I use conda in managing all the libraries for my projects"
 objectives:
 - explore how most people currently install and manage python libraries
 - discuss how current methods causes headaches in managing the vast libraries for various projects
@@ -17,33 +17,35 @@ keypoints:
 
 ---
 
-## Review from Preliminary
+## 0. Review from Preliminary
 
 #### What is Conda?
 
-Similar to [pip](https://pypi.python.org/pypi/pip), [**conda**](http://conda.pydata.org/docs/) is an **open source package and environment management system**.
+[**conda**](http://conda.pydata.org/docs/) is an **open source `package` and `environment` management system for any programming language**;
+though it is quite popular in the python community.
 
 #### What is Anaconda?
-[Anaconda](https://www.continuum.io/why-anaconda) is a data science platform that comes with a lot of packages. It uses conda at the core.
+[Anaconda](https://www.continuum.io/why-anaconda) is a distribution of conda. It is a data science platform that comes with a lot of packages.
 
 #### What is Miniconda?
 Unlike Anaconda, Miniconda doesn't come with any installed packages by default.
 Note that for miniconda, everytime you open up a terminal, `conda` won't automatically be available. Run the command below to use conda within miniconda.
 
 ~~~
-$ export PATH=$HOME/miniconda2/bin:$PATH
+$ export PATH=$HOME/miniconda/bin:$PATH
 ~~~
 {: .bash}
 
 > ## What I'm using for this tutorial?
 >
-> For this tutorial, I am using Anaconda. If you have miniconda, the commands will be the same! *This also applies across operating systems*.
+> For this tutorial, I am using Anaconda. If you have miniconda, the commands will be the same! *This also applies across operating systems (Except for the activation of environment)*.
 >
 {: .callout}
 
-**Use the terminal window to access Conda in Linux or OS X and Powershell in Windows.**
+**Use the terminal window to access Conda in Linux or OS X and Anaconda prompt in Windows.**
 
-## Managing Conda
+---
+## 1. Managing Conda
 
 Let's first start by checking if conda is installed.
 
@@ -53,7 +55,7 @@ $ conda --version
 {: .bash}
 
 ~~~
-conda 4.2.12
+conda 4.2.13
 ~~~
 {: .output}
 
@@ -97,10 +99,10 @@ The following NEW packages will be INSTALLED:
 
 The following packages will be UPDATED:
 
-    conda:       4.0.7-py27_0 --> 4.2.12-py27_0 
-    conda-env:   2.4.5-py27_0 --> 2.6.0-0       
-    python:      2.7.11-0     --> 2.7.12-1      
-    sqlite:      3.9.2-0      --> 3.13.0-0      
+    conda:       4.0.7-py27_0 --> 4.2.12-py27_0
+    conda-env:   2.4.5-py27_0 --> 2.6.0-0
+    python:      2.7.11-0     --> 2.7.12-1
+    sqlite:      3.9.2-0      --> 3.13.0-0
 
 Proceed ([y]/n)? y
 
@@ -114,32 +116,33 @@ Unlinking packages ...
 [      COMPLETE      ]|###################################################| 100%
 Linking packages ...
 [      COMPLETE      ]|###################################################| 100%
-  
+
 ~~~
 {: .output}
 
-Conda will compare versions and let you know what is available to install. 
+Conda will compare versions and let you know what is available to install.
 It will also tell you about other packages that will be automatically updated or changed with the update.
 *If there are newer version available, follow the instruction to install the newest version of conda.*
 
 In my case, the conda needed to be updated, along with this update, some dependencies also need to be updated.
 There is also a NEW package that will be INSTALLED in order to update conda.
 
-
-## Managing Environments
+---
+## 2. Managing Environments
 
 ### What is a conda environment and why is it so useful?
 
-Using `conda`, you can create an *environment* for your project. 
-An environment is a set of packages that can be used in one or multiple projects. 
+Using `conda`, you can create an isolated python *environment* for your project.
+An environment is a set of packages that can be used in one or multiple projects.
 The default environment with Anaconda is the root environment, which contains Anaconda default packages listed [here](https://docs.continuum.io/anaconda/pkg-docs).
 
-There are two ways of creating a conda environment. 
+There are two ways of creating a conda environment.
 
-1. An environment file in YAML format (`environment.yml`)
-2. Manual specifications of packages
+1. An environment file in YAML format (`environment.yml`).
+2. Manual specifications of packages.
 
-##### Creating environment with an environment file.
+---
+#### Creating environment with an environment file.
 
 YAML? What's that?
 
@@ -148,24 +151,25 @@ YAML? What's that?
 
 > ## An example of environment file (`environment.yml`)
 >
-> This is an example of an environment file that will install `python 2.7`, `python-pip`, and `gsconfig` library using pip.
-> The new version of Conda is friendly with pip, so if some packages are not found in Anaconda Cloud, then
-> you can install them with `pip install`
+> This is an example of an environment file that will install `python 3.6`, `python-pip`, and `pyjokes` library using pip.
+> Conda is friendly with pip, so if some packages are not found in Anaconda Cloud, then
+> you can install them with `pip install`. Open up your favorite text editor, copy and paste the code below,
+> save your file as `environment.yml`.
 >
 > ~~~
-> name: some-environment
+> name: playenv
 > channels:
 > - conda-forge
 > dependencies:
-> - python=2.7
+> - python=3.6
 > - pip
 > - pip:
->     - gsconfig
+>     - pyjokes
 > ~~~
-> {: .yaml}
+> {: .source}
 {: .callout}
 
-Now, let's install `environment.yml` environment file above so that we can create a conda environment called `some-environment`.
+Now, let's install `environment.yml` environment file above so that we can create a conda environment called `playenv`.
 
 ~~~
 $ conda env create --file environment.yml
@@ -176,39 +180,24 @@ $ conda env create --file environment.yml
 Using Anaconda Cloud api site https://api.anaconda.org
 Fetching package metadata .........
 Solving package specifications: ..........
-Pruning fetched packages from the cache ...
-Fetching packages ...
-ca-certificate 100% |################################| Time: 0:00:01 157.11 kB/s
-ncurses-5.9-9. 100% |################################| Time: 0:00:00   1.63 MB/s
-zlib-1.2.8-3.t 100% |################################| Time: 0:00:00 444.46 kB/s
-readline-6.2-0 100% |################################| Time: 0:00:00 908.44 kB/s
-python-2.7.12- 100% |################################| Time: 0:00:01   7.18 MB/s
-certifi-2016.9 100% |################################| Time: 0:00:00 661.00 kB/s
-setuptools-28. 100% |################################| Time: 0:00:00 862.32 kB/s
-wheel-0.29.0-p 100% |################################| Time: 0:00:00 393.76 kB/s
-pip-9.0.0-py27 100% |################################| Time: 0:00:00   2.19 MB/s
-Extracting packages ...
-[      COMPLETE      ]|###################################################| 100%
 Linking packages ...
-[      COMPLETE      ]|###################################################| 100%
-Collecting gsconfig
-  Using cached gsconfig-1.0.6-py2-none-any.whl
-Collecting gisdata==0.5.4 (from gsconfig)
-Collecting httplib2>=0.7.4 (from gsconfig)
-Installing collected packages: gisdata, httplib2, gsconfig
-Successfully installed gisdata-0.5.4 gsconfig-1.0.6 httplib2-0.9.2
+[      COMPLETE      ]|###################################################################################################################################################################| 100%
+Collecting pyjokes
+  Downloading pyjokes-0.5.0-py2.py3-none-any.whl
+Installing collected packages: pyjokes
+Successfully installed pyjokes-0.5.0
 #
 # To activate this environment, use:
-# > source activate some-environment
+# > source activate playenv
 #
 # To deactivate this environment, use:
-# > source deactivate some-environment
+# > source deactivate playenv
 #
 
 ~~~
 {: .output}
 
-From the output above, the instruction highlighted ways to activate and deactivate environment. 
+From the output above, the instruction highlighted ways to activate and deactivate environment.
 **Note: This command is slighty different between operating systems.**
 
 Use an environment:
@@ -221,6 +210,7 @@ Deactivate an environment (goes back to root):
 - Linux, OS X: `$ source deactivate`
 - Windows: `$ deactivate`
 
+---
 #### Creating environment by manually specifying packages.
 
 We can create `test_env` conda environment by specifying the name, channel, and list of packages within the terminal window.
@@ -232,80 +222,7 @@ $ conda create -c conda-forge -n test_env python=2.7 numpy matplotlib pandas
 ~~~
 {: .bash}
 
-~~~
-Fetching package metadata .........
-Solving package specifications: ..........
-
-Package plan for installation in environment //anaconda/envs/test_env:
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    libpng-1.6.26              |                0         320 KB  conda-forge
-    openblas-0.2.18            |                6        16.5 MB  conda-forge
-    blas-1.1                   |         openblas           1 KB  conda-forge
-    numpy-1.11.2               |py27_blas_openblas_200         3.4 MB  conda-forge
-    cycler-0.10.0              |           py27_0          13 KB  conda-forge
-    python-dateutil-2.5.3      |           py27_0         236 KB  conda-forge
-    pandas-0.19.1              |      np111py27_0         8.4 MB  conda-forge
-    ------------------------------------------------------------
-                                           Total:        28.9 MB
-
-The following NEW packages will be INSTALLED:
-
-    blas:            1.1-openblas                  conda-forge
-    ca-certificates: 2016.9.26-0                   conda-forge
-    certifi:         2016.9.26-py27_0              conda-forge
-    cycler:          0.10.0-py27_0                 conda-forge
-    freetype:        2.6.3-1                       conda-forge
-    functools32:     3.2.3.2-py27_1                conda-forge
-    libgfortran:     3.0.0-0                       conda-forge
-    libpng:          1.6.26-0                      conda-forge
-    matplotlib:      1.5.3-np111py27_2             conda-forge
-    ncurses:         5.9-9                         conda-forge
-    numpy:           1.11.2-py27_blas_openblas_200 conda-forge [blas_openblas]
-    openblas:        0.2.18-6                      conda-forge
-    openssl:         1.0.2h-2                      conda-forge
-    pandas:          0.19.1-np111py27_0            conda-forge
-    pip:             9.0.0-py27_0                  conda-forge
-    pyparsing:       2.1.10-py27_0                 conda-forge
-    python:          2.7.12-1                      conda-forge
-    python-dateutil: 2.5.3-py27_0                  conda-forge
-    pytz:            2016.7-py27_0                 conda-forge
-    readline:        6.2-0                         conda-forge
-    setuptools:      28.7.0-py27_0                 conda-forge
-    six:             1.10.0-py27_1                 conda-forge
-    sqlite:          3.13.0-1                      conda-forge
-    tk:              8.5.19-0                      conda-forge
-    wheel:           0.29.0-py27_0                 conda-forge
-    zlib:            1.2.8-3                       conda-forge
-
-Proceed ([y]/n)? y
-
-Pruning fetched packages from the cache ...
-Fetching packages ...
-libpng-1.6.26- 100% |################################| Time: 0:00:00 689.59 kB/s
-openblas-0.2.1 100% |################################| Time: 0:00:02   8.45 MB/s
-blas-1.1-openb 100% |################################| Time: 0:00:00   1.05 MB/s
-numpy-1.11.2-p 100% |################################| Time: 0:00:00   3.59 MB/s
-cycler-0.10.0- 100% |################################| Time: 0:00:00 205.69 kB/s
-python-dateuti 100% |################################| Time: 0:00:00 688.70 kB/s
-pandas-0.19.1- 100% |################################| Time: 0:00:01   6.11 MB/s
-Extracting packages ...
-[      COMPLETE      ]|###################################################| 100%
-Linking packages ...
-[      COMPLETE      ]|###################################################| 100%
-#
-# To activate this environment, use:
-# > source activate test_env
-#
-# To deactivate this environment, use:
-# > source deactivate test_env
-#
-
-~~~
-{: .output}
+Conda will solve any dependencies between the packages like before and create a new environment with those packages.
 
 
 > ## Verifying current environment
@@ -313,7 +230,7 @@ Linking packages ...
 > To know the current environment that you're in you can either look at your terminal:
 >
 > ~~~
-> (test_env) D-69-91-135-15:env_files lsetiawan$ 
+> (test_env) D-69-91-135-15:env_files lsetiawan$
 > ~~~
 > {: .bash}
 >
@@ -322,226 +239,86 @@ Linking packages ...
 > Another way that you can check for your current active environment is a command:
 >
 > ~~~
-> $ conda info --envs
+> $ conda env list
 > ~~~
 > {: .bash}
+> ~~~
+> test_env              *  //anaconda/envs/test_env
+> playenv                  //anaconda/envs/playenv
+> root                     //anaconda
+> ~~~
+>{: .output}
 >
-> The current environment is indicated by (\*) character. This is also a great way to see the list of environments that have been created.
+> The current environment is indicated by (\*) character.
+> This is also a great way to see the list of environments that have been created.
+> In the list, the path to each environment is also shown.
 >
 {: .callout}
 
+---
+### Sharing Environments with others
 
-#### Sharing Environments with others
-
-To share an environment, you can export your conda environment to an environment file. 
+To share an environment, you can export your conda environment to an environment file.
 By doing this, the resulting environment file is very detailed with specific version listing.
 
 Exporting your environment to a file called `myenv.yml`:
 
 ~~~
-$ conda env export -f myenv.yml --no-builds
+$ conda env export -f test_env.yml -n test_env
 ~~~
 {: .bash}
 
-~~~
-name: test_env
-channels:
-- conda-forge
-- defaults
-dependencies:
-- cligj=0.4.0
-- conda-forge::affine=2.0.0.post1
-- conda-forge::blas=1.1
-- conda-forge::boto3=1.4.1
-- conda-forge::botocore=1.4.49
-- conda-forge::ca-certificates=2016.9.26
-- conda-forge::certifi=2016.9.26
-- conda-forge::click=6.6
-- conda-forge::click-plugins=1.0.3
-- conda-forge::curl=7.49.1
-- conda-forge::cycler=0.10.0
-- conda-forge::docutils=0.12
-- conda-forge::enum34=1.1.6
-- conda-forge::expat=2.1.0
-- conda-forge::freetype=2.6.3
-- conda-forge::freexl=1.0.2
-- conda-forge::functools32=3.2.3.2
-- conda-forge::futures=3.0.5
-- conda-forge::gdal=2.1.2
-- conda-forge::geos=3.4.2
-- conda-forge::giflib=5.1.4
-- conda-forge::hdf4=4.2.12
-- conda-forge::hdf5=1.8.17
-- conda-forge::icu=56.1
-- conda-forge::jasper=1.900.1
-- conda-forge::jmespath=0.9.0
-- conda-forge::jpeg=9b
-- conda-forge::json-c=0.12
-- conda-forge::kealib=1.4.6
-- conda-forge::krb5=1.14.2
-- conda-forge::libdap4=3.18.2
-- conda-forge::libgfortran=3.0.0
-- conda-forge::libiconv=1.14
-- conda-forge::libnetcdf=4.4.1
-- conda-forge::libpng=1.6.26
-- conda-forge::libpq=9.5.4
-- conda-forge::libspatialite=4.3.0a
-- conda-forge::libtiff=4.0.6
-- conda-forge::libxml2=2.9.4
-- conda-forge::matplotlib=1.5.3
-- conda-forge::ncurses=5.9
-- conda-forge::numpy=1.11.2
-- conda-forge::openblas=0.2.18
-- conda-forge::openjpeg=2.1.2
-- conda-forge::openssl=1.0.2h
-- conda-forge::pandas=0.19.1
-- conda-forge::patsy=0.4.1
-- conda-forge::pip=9.0.0
-- conda-forge::postgresql=9.5.4
-- conda-forge::proj.4=4.9.3
-- conda-forge::proj4=4.9.3
-- conda-forge::pyparsing=2.1.10
-- conda-forge::python=2.7.12
-- conda-forge::python-dateutil=2.5.3
-- conda-forge::pytz=2016.7
-- conda-forge::readline=6.2
-- conda-forge::s3transfer=0.1.8
-- conda-forge::scipy=0.18.1
-- conda-forge::setuptools=28.7.0
-- conda-forge::six=1.10.0
-- conda-forge::snuggs=1.4.0
-- conda-forge::sqlite=3.13.0
-- conda-forge::statsmodels=0.6.1
-- conda-forge::tk=8.5.19
-- conda-forge::wheel=0.29.0
-- conda-forge::xerces-c=3.1.4
-- conda-forge::xz=5.2.2
-- conda-forge::zlib=1.2.8
-- pip:
-  - affine==2.0.0.post1
-  - boto3==1.4.1
-  - botocore==1.4.49
-  - certifi==2016.9.26
-  - click==6.6
-  - click-plugins==1.0.3
-  - cycler==0.10.0
-  - docutils==0.12
-  - enum34==1.1.6
-  - functools32==3.2.3.post2
-  - futures==3.0.5
-  - gdal==2.1.2
-  - jmespath==0.9.0
-  - matplotlib==1.5.3
-  - numpy==1.11.2
-  - pandas==0.19.1
-  - patsy==0.4.1
-  - pip==9.0.1
-  - pyparsing==2.1.10
-  - python-dateutil==2.5.3
-  - pytz==2016.7
-  - s3transfer==0.1.8
-  - scipy==0.18.1
-  - setuptools==28.7.0.post20161109
-  - six==1.10.0
-  - snuggs==1.4.0
-  - statsmodels==0.6.1
-  - wheel==0.29.0
-prefix: //anaconda/envs/test_env
-~~~
-{: .output}
+This will export a very detailed environment file that you can share with other.
+This file specifies the `package=version=build`.
+This environment file will not work to share across platform, since the builds and versions might be different.
 
-#### Making an exact copy of an environment and deleting environment
+> ## Best practice to share environments
+>
+> 1. Always start from an environment file.
+> 2. As you add packages to the environment, be sure to update the file.
+> 3. Try not to hardwire versions so you will always have the most up to date version and works across platform, *unless you have to*.
+>
+> If you follow these guidelines, you should be able to give your environment file to anyone,
+> and they will be able to install your packages with no problem.
+{: .callout}
 
-##### Copying an environment
+---
+### Making an exact copy of an environment and deleting environment
 
-We can make an exact copy of an environment to an environment with a different name. 
-This maybe useful for any testing vs live environments. In this example, `test_env` is cloned to create `live_env`.
+#### Copying an environment
+
+We can make an exact copy of an environment to an environment with a different name.
+This maybe useful for any testing vs live environments or python 2.7 vs python 3.6 for the same packages.
+In this example, `test_env` is cloned to create `live_env`.
 
 ~~~
 $ conda create --name live_env --clone test_env
 ~~~
 {: .bash}
 
-~~~
-Source:      //anaconda/envs/test_env
-Destination: //anaconda/envs/live_env
-Using Anaconda Cloud api site https://api.anaconda.org
-Packages: 26
-Files: 10
-Linking packages ...
-[      COMPLETE      ]|###################################################| 100%
-#
-# To activate this environment, use:
-# $ source activate live_env
-#
-# To deactivate this environment, use:
-# $ source deactivate
-#
+#### Deleting an environment
+
+Deleting an environment is very easy using conda.
+Since we are only testing out our environment, we will delete `live_env` to de-clutter ourselves. *Make sure that you are not currently using `live_env`.*
 
 ~~~
-{: .output}
-
-##### Deleting an environment
-
-Deleting an environment is very easy using conda. 
-Since we are only testing out our environment, we will delete `live_env` to de-clutter ourselves. *Make sure that you are not currently using `live_env`.* 
-
-~~~
-$ conda remove -n live_env --all
+$ conda env remove -n live_env
 ~~~
 {: .bash}
 
-~~~
-Using Anaconda Cloud api site https://api.anaconda.org
-
-Package plan for package removal in environment //anaconda/envs/live_env:
-
-The following packages will be REMOVED:
-
-    blas:            1.1-openblas                  conda-forge
-    ca-certificates: 2016.9.26-0                   conda-forge
-    certifi:         2016.9.26-py27_0              conda-forge
-    cycler:          0.10.0-py27_0                 conda-forge
-    freetype:        2.6.3-1                       conda-forge
-    functools32:     3.2.3.2-py27_1                conda-forge
-    libgfortran:     3.0.0-0                       conda-forge
-    libpng:          1.6.26-0                      conda-forge
-    matplotlib:      1.5.3-np111py27_2             conda-forge
-    ncurses:         5.9-9                         conda-forge
-    numpy:           1.11.2-py27_blas_openblas_200 conda-forge [blas_openblas]
-    openblas:        0.2.18-6                      conda-forge
-    openssl:         1.0.2h-2                      conda-forge
-    pandas:          0.19.1-np111py27_0            conda-forge
-    pip:             9.0.0-py27_0                  conda-forge
-    pyparsing:       2.1.10-py27_0                 conda-forge
-    python:          2.7.12-1                      conda-forge
-    python-dateutil: 2.5.3-py27_0                  conda-forge
-    pytz:            2016.7-py27_0                 conda-forge
-    readline:        6.2-0                         conda-forge
-    setuptools:      28.7.0-py27_0                 conda-forge
-    six:             1.10.0-py27_1                 conda-forge
-    sqlite:          3.13.0-1                      conda-forge
-    tk:              8.5.19-0                      conda-forge
-    wheel:           0.29.0-py27_0                 conda-forge
-    zlib:            1.2.8-3                       conda-forge
-
-Proceed ([y]/n)? y
-
-Unlinking packages ...
-[      COMPLETE      ]|###################################################| 100%
-~~~
-{: .output}
-
-## Managing Packages
+---
+## 3. Managing Packages
 
 #### Seeing what packages are available
 
-We will now check packages that are available to us. The command below will list all the packages in an environment, in this case `test_env`. 
-The list will include versions of each package, the specific build, and the channel that the package was downloaded from. `conda list` is also useful to ensure that you have installed
-the packages that you desire.
+We will now check packages that are available to us.
+The command below will list all the packages in an environment, in this case `test_env`.
+The list will include versions of each package, the specific build,
+and the channel that the package was downloaded from.
+`conda list` is also useful to ensure that you have installed the packages that you desire.
 
 ~~~
-$ conda list
+$ conda list -n test_env
 ~~~
 {: .bash}
 
@@ -556,40 +333,23 @@ cycler                    0.10.0                   py27_0    conda-forge
 freetype                  2.6.3                         1    conda-forge
 functools32               3.2.3.2                  py27_1    conda-forge
 libgfortran               3.0.0                         0    conda-forge
-libpng                    1.6.26                        0    conda-forge
-matplotlib                1.5.3               np111py27_2    conda-forge
-ncurses                   5.9                           9    conda-forge
-numpy                     1.11.2          py27_blas_openblas_200  [blas_openblas]  conda-forge
-openblas                  0.2.18                        6    conda-forge
-openssl                   1.0.2h                        2    conda-forge
-pandas                    0.19.1              np111py27_0    conda-forge
-pip                       9.0.0                    py27_0    conda-forge
-pyparsing                 2.1.10                   py27_0    conda-forge
-python                    2.7.12                        1    conda-forge
-python-dateutil           2.5.3                    py27_0    conda-forge
-pytz                      2016.7                   py27_0    conda-forge
-readline                  6.2                           0    conda-forge
-setuptools                28.7.0                   py27_0    conda-forge
-six                       1.10.0                   py27_1    conda-forge
-sqlite                    3.13.0                        1    conda-forge
-tk                        8.5.19                        0    conda-forge
-wheel                     0.29.0                   py27_0    conda-forge
-zlib                      1.2.8                         3    conda-forge
-pip                       9.0.1                     <pip>
+...
 
 ~~~
 {: .output}
 
 #### Searching for a certain package
 
-Some packages might not be available in conda, but it is available in [pypi](https://pypi.python.org/pypi). For example, we will search for rasterio within the [anaconda cloud](https://anaconda.org/). 
+Some packages might not be available in conda, but it is available in [pypi](https://pypi.python.org/pypi). For example, we will search for rasterio within the [anaconda cloud](https://anaconda.org/).
 *It is not necessary to create an account with anaconda cloud, unless you'd like to contribute in the future when you are pro with conda.*
 
 ![Search in Anaconda Cloud](../fig/Anaconda_cloud_rasterio_listing.png)
 
 > ## Anaconda Cloud and Trusted Sources
 >
-> **Anaconda Cloud** is a package management service that makes it easy to find, access, store and share public and private notebooks, environments, and conda and PyPI packages, and to keep up with updates made to the packages and environments you’re using (Ref. [Anaconda Cloud Doc](https://docs.continuum.io/anaconda-cloud/)). 
+> **Anaconda Cloud** is a package management service that makes it easy to find, access, store and share public and private notebooks,
+> environments, and conda and PyPI packages,
+> and to keep up with updates made to the packages and environments you're using (Ref. [Anaconda Cloud Doc](https://docs.continuum.io/anaconda-cloud/)).
 > Anaconda Cloud is made up of channels/owners. Each channels contains one or more conda packages. 
 >
 > It is important to be careful when downloading any packages from an untrusted source. [Conda forge](https://conda-forge.github.io/) is a reliable source for many popular python packages. It is wise to research about the source of a conda package.
@@ -601,7 +361,7 @@ In this example, we will use rasterio from conda-forge. The anaconda cloud page 
 ![Rasterio package page](../fig/Anaconda_cloud_rasterio_page.png)
 
 
-If you are already using conda, you can do this search within the command line:
+If you are using anaconda, you can do this search within the command line:
 
 ~~~
 $ anaconda search rasterio
@@ -652,77 +412,12 @@ $ conda install -c conda-forge rasterio=0.35
 ~~~
 {: .bash}
 
-~~~
-Using Anaconda Cloud api site https://api.anaconda.org
-Fetching package metadata .........
-Solving package specifications: ..........
-
-Package plan for installation in environment //anaconda/envs/test_env:
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    rasterio-0.35.1            |      np111py27_1         905 KB  conda-forge
-
-The following NEW packages will be INSTALLED:
-
-    affine:        2.0.0.post1-py27_0  conda-forge
-    click:         6.6-py27_1          conda-forge
-    click-plugins: 1.0.3-py27_0        conda-forge
-    cligj:         0.4.0-py27_0                   
-    curl:          7.49.1-1            conda-forge
-    enum34:        1.1.6-py27_1        conda-forge
-    expat:         2.1.0-2             conda-forge
-    freexl:        1.0.2-1             conda-forge
-    gdal:          1.11.4-np111py27_10 conda-forge
-    geos:          3.4.2-2             conda-forge
-    giflib:        5.1.4-0             conda-forge
-    hdf4:          4.2.12-0            conda-forge
-    hdf5:          1.8.17-7            conda-forge
-    icu:           56.1-4              conda-forge
-    jasper:        1.900.1-3           conda-forge
-    jpeg:          9b-0                conda-forge
-    json-c:        0.12-0              conda-forge
-    krb5:          1.14.2-0            conda-forge
-    libiconv:      1.14-3              conda-forge
-    libnetcdf:     4.4.1-0             conda-forge
-    libspatialite: 4.3.0a-11           conda-forge
-    libtiff:       4.0.6-7             conda-forge
-    libxml2:       2.9.4-3             conda-forge
-    openjpeg:      2.1.2-1             conda-forge
-    postgresql:    9.5.4-2             conda-forge
-    proj.4:        4.9.3-0             conda-forge
-    proj4:         4.9.3-0             conda-forge
-    rasterio:      0.35.1-np111py27_1  conda-forge
-    snuggs:        1.4.0-py27_0        conda-forge
-    xerces-c:      3.1.4-2             conda-forge
-    xz:            5.2.2-0             conda-forge
-
-Proceed ([y]/n)? y
-
-Fetching packages ...
-rasterio-0.35. 100% |####################################################################################| Time: 0:00:00   1.64 MB/s
-Extracting packages ...
-[      COMPLETE      ]|#######################################################################################################| 100%
-Linking packages ...
-[      COMPLETE      ]|#######################################################################################################| 100%
-~~~
-{: .output}
-
 > ## Pre-configuring Channels
 >
 > If you have a few trusted channels that you prefer to use, you can pre-configure these so that everytime you are creating an environment, you won't need to explicitly declare the channel. 
 >
 > ~~~
 > $ conda config --add channels conda-forge
-> ~~~
-> {: .bash}
->
-> For miniconda, in order for your channels information to be exported into an environment file, you have to pre-configure your desired channels or add them during export.
->
-> ~~~
-> $ conda env export -f myenv.yml -c conda-forge -c defaults --override-channels
 > ~~~
 > {: .bash}
 {: .callout}
