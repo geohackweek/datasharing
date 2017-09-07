@@ -5,7 +5,7 @@ teaching: 15
 exercises: 0
 questions:
 - "What is Conda?"
-- "How can I use conda in managing all the libraries for my projects"
+- "How can I use conda in managing all the libraries for my projects?"
 objectives:
 - explore how most people currently install and manage python libraries
 - discuss how current methods causes headaches in managing the vast libraries for various projects
