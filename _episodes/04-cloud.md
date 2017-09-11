@@ -47,10 +47,10 @@ keypoints:
   - Use Github for collaboration and coordination
 
 ## Examples of Applications on the Cloud with a Geospatial focus
-- Web frameworks with API (AralDIF/NicaDIF/HiMAT)
+- Web frameworks with API ([AralDIF](http://araldif.azurewebsites.net))
   - Elastic Beanstalk. Django (Python) for webframework
   - API building
-- Geoserver for data sharing
+- Geoserver for data sharing ([Nanoos](http://data.nanoos.org/geoserver))
   - Open-source geospatial server written in Java that allows users to share, process and edit geospatial data
   - Leaflet frontend
 - Jupyterhub
