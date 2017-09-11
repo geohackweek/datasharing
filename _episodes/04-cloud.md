@@ -1,6 +1,6 @@
 ---
 
-title: "Cloud Computing in Geospatial Science"
+title: "Cloud Computing in Geospatial Sciences"
 teaching: 15
 exercises: 0
 questions:
