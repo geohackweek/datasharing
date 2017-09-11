@@ -16,6 +16,7 @@ keypoints:
 - On-demand, shared and configurable pool of resources
 - Rapidly provisioned
 - Highly scalable
+- Cattle not pets
 
 ### Types of cloud computing services
 - Infrastructure as a service (IaaS)
@@ -36,10 +37,12 @@ keypoints:
 ## Important things to think about 
 - How do I choose a cloud provider? (e.g. AWS, Azure, Google Cloud Platform)
 - Costing
+- Pervasiveness of vendor in field
 - Continuous, integrated delivery (build-test-share)
   - Use Github for collaboration and coordination
 
 ## Examples of Applications on the Cloud with a Geospatial focus
 - Web frameworks with API (AralDIF/NicaDIF/HiMAT)
 - Geoserver for data sharing 
+- Managed databases
 - Jupyterhub
