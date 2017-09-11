@@ -18,7 +18,7 @@ keypoints:
 - Highly scalable
 - Cattle not pets
 
-[!Cattle](../fig/cattle.png)
+![Cattle](../fig/cattle.png)
 
 ### Types of cloud computing services
 
