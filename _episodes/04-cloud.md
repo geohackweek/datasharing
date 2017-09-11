@@ -18,7 +18,12 @@ keypoints:
 - Highly scalable
 - Cattle not pets
 
+[!Cattle](../fig/cattle.png)
+
 ### Types of cloud computing services
+
+*** Terminology/definitions becoming less relevant ***
+
 - Infrastructure as a service (IaaS)
   - E.g. virtual machines with operating systems, like traditional servers
   
@@ -27,7 +32,7 @@ keypoints:
   - E.g. Google App Engine, web applications
   
 - Software as a service (SaaS)
-  - E.g. ArcGIS on the cloud, Google Docs
+  - E.g. ArcGIS on the cloud, Google Docs, email 
 
 - Data as a service
   - Collected data is shared in human readable form 
@@ -43,6 +48,9 @@ keypoints:
 
 ## Examples of Applications on the Cloud with a Geospatial focus
 - Web frameworks with API (AralDIF/NicaDIF/HiMAT)
-- Geoserver for data sharing 
-- Managed databases
+  - Elastic Beanstalk. Django (Python) for webframework
+  - API building
+- Geoserver for data sharing
+  - Open-source geospatial server written in Java that allows users to share, process and edit geospatial data
+  - Leaflet frontend
 - Jupyterhub
