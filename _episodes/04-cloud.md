@@ -20,6 +20,9 @@ keypoints:
 
 ![Cattle](../fig/cattle.png)
 
+
+** Think about using cloud resources for data sharing and collaboration **
+
 ### Types of cloud computing services
 
 *** Terminology/definitions becoming less relevant ***
@@ -54,3 +57,9 @@ keypoints:
   - Open-source geospatial server written in Java that allows users to share, process and edit geospatial data
   - Leaflet frontend
 - Jupyterhub
+
+## Getting on board
+Google: Tim has credits, no CC necessary
+AWS: AWS for Research Credits ($100)
+Azure: Azure for Research ($200)
+
