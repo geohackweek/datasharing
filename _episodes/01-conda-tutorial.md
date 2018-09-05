@@ -19,7 +19,7 @@ keypoints:
 
 ---
 We will start this tutorial by looking at a picture of the perfect python environment.
-![Perfect Python Environment](/assets/img/conda/conda-env.jpeg)
+![Perfect Python Environment](../assets/img/conda/conda-env.jpeg)
 
 > ## Python Environment Discussion
 >
@@ -198,7 +198,7 @@ conda info
 
 ### 1. Environments
 
-![Conda environments](/assets/img/conda/conda-env2.jpeg)
+![Conda environments](../assets/img/conda/conda-env2.jpeg)
 
 What is a conda environment?
 - Similar to python virtual environments (venv)
@@ -238,7 +238,7 @@ conda env remove --yes --name myenv
 
 ### 2. Channels
 
-![Conda channels](/assets/img/conda/conda-channels.jpeg)
+![Conda channels](../assets/img/conda/conda-channels.jpeg)
 
 What is a conda channel?
  - Similar to linux repository (or app store)
