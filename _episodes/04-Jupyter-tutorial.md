@@ -19,10 +19,14 @@ objectives:
 
 
 ## Installing the Single User Jupyter Notebook server
-If you have conda installed, jupyter notebook is also installed by default. Let's try that. We will try to fork a version of  the tutorial contents git repository (https://github.com/geohackweek/tutorial_contents.git)
 
+
+We will use some of the skills learned in the Github tutorial to fork a version of the tutorial contents (https://github.com/geohackweek/tutorial_contents.git) on to your local machine. Then we will use conda to install a sample environment.yml file and run notebooks locally. 
+
+{.challenge}
 ----- 10 minutes exercise to install your own version of jupyter notebook ----
 
+1. Check if you have jupyter notebook notebook installed 
 
 ------
 
@@ -35,8 +39,9 @@ Jupyterhub:
 
 All notebooks have access to the same set of packages and libraries as specified in the **environment file**.  
 
-Which means... 
-** Jupyterhub is a way to give a standardized Jupyter Notebook server to each person in a group of people **
+Which means...
+
+**Jupyterhub is a way to give a standardized Jupyter Notebook server to each person in a group of people**
 
 ## JupyterHub Access
 The JupyterHub for GeohackWeek is accessible at: https://jupyterhub.geohackweek.org
