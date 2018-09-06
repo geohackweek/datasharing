@@ -8,6 +8,10 @@ questions:
 - "What is JupyterHub?"
 objectives:
 - Learn how to share executable code that you've written
+keypoints:
+- The cloud provides on-demand access to infinite computational resources
+- Resources need to be carefully managed, because charges are usually tied to how long resources are held
+- The cloud is great for bursty, high-volume computing, or for some small services you might want to run
 ---
 
 ## Jupyter Notebook
