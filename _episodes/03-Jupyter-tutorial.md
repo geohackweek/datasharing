@@ -27,22 +27,9 @@ We will use some of the skills learned in the Github tutorial to fork a version 
 >
 > 1. Check if you have jupyter notebook installed
 > 2. Git fork (https://github.com/geohackweek/tutorial_contents.git) 
-> 3. conda install the sample environment file 
+> 3. conda install the sample environment file from 
 > 4. Launch Jupyter Notebook from inside the git repository
 >
-{: .challenge}
-
-> ## Python Environment Discussion
->
-> What are the benefits of having a well defined python environment?
->
-> [https://etherpad.wikimedia.org/p/geohack-conda](https://etherpad.wikimedia.org/p/geohack-conda)
->
-> > ## Solution
-> > 1. Avoid future breakage if any dependencies changes
-> > 2. Allows better collaboration among team
-> > 3. Reliability
-> {: .solution}
 {: .challenge}
 
 ## What is Jupyterhub 
@@ -56,10 +43,8 @@ Which means...
 
 **Jupyterhub is a way to give a standardized Jupyter Notebook server to each person in a group of people**
 
+![](../fig/geohackweek_aws_setup.png)
 ## JupyterHub Access
 The JupyterHub for GeohackWeek is accessible at: https://jupyterhub.geohackweek.org
 
 You will need a [Github](http://www.github.com) account for authentication. 
-
-
-   
