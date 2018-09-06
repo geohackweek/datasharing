@@ -1,7 +1,7 @@
 ---
 
 title: "Introduction to Jupyter & Jupyterhub"
-teaching: 20
+teaching: 10
 exercises: 10
 questions:
 - "What are Jupyter Notebooks?"
