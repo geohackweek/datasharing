@@ -23,13 +23,12 @@ objectives:
 
 We will use some of the skills learned in the Github tutorial to fork a version of the tutorial contents (https://github.com/geohackweek/tutorial_contents.git) on to your local machine. Then we will use conda to install a sample environment.yml file and run notebooks locally. 
 
-## 10 minutes conda and git challenge
+> ## 10 minutes conda and git challenge
 > 1. Check if you have jupyter notebook installed
 > 2. Git fork (https://github.com/geohackweek/tutorial_contents.git) 
 > 3. conda install the sample environment file 
 > 4. Launch Jupyter Notebook from inside the git repository
-{.challenge}
-
+{: .challenge}
 
 ## What is Jupyterhub 
 Jupyterhub: 
