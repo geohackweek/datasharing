@@ -116,7 +116,7 @@ Recently, his studies are shifting more towards a geospatial focus, and he will 
 {: .challenge}
 
 Scenerio 2:
-In the other side of the world, we meet Sandy. She is an advanced undergrad that have attended on of the hackweek at UW eScience. She just started to really program in Python. One of her senior thesis requires her to analyze a geospatial entity. Similar to bob she knows that she will need to use gdal, fiona, and netcdf. Having learned about `conda` in the hackweek she started following the `conda` workflow in creating a new project. Let's see what happens.
+In the other side of the world, we meet Sandy. She is an advanced undergrad that has attended one of the hackweek at UW eScience. She just started to really program in Python. Her senior thesis project requires her to analyze a geospatial entity. Similar to bob she knows that she will need to use gdal, fiona, and netcdf. Having learned about `conda` in the hackweek she started following the `conda` workflow in creating a new project. Let's see what happens.
 
 > ## Sandy's adventure
 >
