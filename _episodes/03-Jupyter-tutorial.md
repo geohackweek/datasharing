@@ -29,8 +29,9 @@ We will use some of the skills learned in the Github and conda tutorial to clone
 
 > ## 10 minutes git and conda challenge
 >
->  1. Check if you have jupyter notebook installed
->  2. Git clone (https://github.com/geohackweek/tutorial_contents.git) 
+>  1. Check if you have jupyter notebook installed (open terminal, run jupyter notebook)
+>  2. Git fork (https://github.com/geohackweek/tutorial_contents.git) 
+>  3. Git clone your OWN fork of the repo 
 >  3. conda install the sample environment file from the raster tutorial
 >  4. Launch Jupyter Notebook from inside the git repository
 >  5. Test running one of the notebooks
