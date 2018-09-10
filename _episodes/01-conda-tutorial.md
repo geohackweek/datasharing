@@ -21,6 +21,8 @@ keypoints:
 We will start this tutorial by looking at a picture of the perfect python environment.
 ![Perfect Python Environment](../assets/img/conda/conda-env.jpeg)
 
+**Definition of python virtual environment: a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.**
+
 > ## Python Environment Discussion
 >
 > What are the benefits of having a well defined python environment?
