@@ -25,14 +25,15 @@ keypoints:
 ## Installing the Single User Jupyter Notebook server
 
 
-We will use some of the skills learned in the Github tutorial to fork a version of the tutorial contents (https://github.com/geohackweek/tutorial_contents.git) on to your local machine. Then we will use conda to install a sample environment.yml file and run notebooks locally. 
+We will use some of the skills learned in the Github and conda tutorial to clone a version of the tutorial contents (https://github.com/geohackweek/tutorial_contents.git) on to your local machine. Then we will use conda to install a sample environment.yml file and run notebooks locally. 
 
-> ## 10 minutes conda and git challenge
+> ## 10 minutes git and conda challenge
 >
 >  1. Check if you have jupyter notebook installed
 >  2. Git clone (https://github.com/geohackweek/tutorial_contents.git) 
->  3. conda install the sample environment file from 
+>  3. conda install the sample environment file from the raster tutorial
 >  4. Launch Jupyter Notebook from inside the git repository
+>  5. Test running one of the notebooks
 >
 {: .challenge}
 
