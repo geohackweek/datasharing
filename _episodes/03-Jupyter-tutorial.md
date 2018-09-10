@@ -30,7 +30,7 @@ We will use some of the skills learned in the Github tutorial to fork a version 
 > ## 10 minutes conda and git challenge
 >
 >  1. Check if you have jupyter notebook installed
->  2. Git fork (https://github.com/geohackweek/tutorial_contents.git) 
+>  2. Git clone (https://github.com/geohackweek/tutorial_contents.git) 
 >  3. conda install the sample environment file from 
 >  4. Launch Jupyter Notebook from inside the git repository
 >
