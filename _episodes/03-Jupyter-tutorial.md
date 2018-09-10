@@ -42,6 +42,7 @@ We will use some of the skills learned in the Github and conda tutorial to clone
 Jupyterhub: 
 - Manages authentication
 - Spawns Jupyter Notebook servers on-demand
+- Each Jupyter Notebook server is **self-contained**
 
 All notebooks have access to the same set of packages and libraries as specified in the **environment file**.  
 
