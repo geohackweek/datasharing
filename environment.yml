@@ -1,7 +1,10 @@
-name: playenv
+name: tutorial-env
 channels:
 - conda-forge
 dependencies:
 - python=3.6
-- pip:
-    - pyjokes
+- numpy
+- matplotlib
+- pandas
+- bokeh
+- rise
