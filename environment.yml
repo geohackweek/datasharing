@@ -8,3 +8,5 @@ dependencies:
 - pandas
 - bokeh
 - rise
+- nb_conda_kernels
+- ipykernel
