@@ -4,3 +4,4 @@
 _site
 __pycache__
 .idea
+.ipynb_checkpoints
