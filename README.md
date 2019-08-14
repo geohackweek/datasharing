@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geohackweek/datasharing/master?filepath=notebooks&urlpath=lab)
+
 # Introductory material for geohackweek
 
 These are files to build a github website hosting the [geohackweek](https://geohackweek.github.io/) introductory [tutorial](https://geohackweek.github.io/Introductory). Github automatically renders these files using Ruby to build the website.
