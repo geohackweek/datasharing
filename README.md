@@ -13,4 +13,4 @@
 
 ## Setting up your own repository
 - [Sample git repository](https://github.com/geohackweek/sample_project_repository)
-
+- [Git workflow for tutorials](https://github.com/geohackweek/datasharing/wiki/Git-workflow-for-tutorials)
