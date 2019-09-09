@@ -6,3 +6,8 @@ These are files to build a github website hosting the [geohackweek](https://geoh
 
 Pull-requests to expand on our tutorial content are encouraged. Changes can be made to the markdown files located in the [episodes folder](https://github.com/geohackweek/nDarrays/tree/gh-pages/_episodes)
 
+## Resources:
+
+- [Intro to Jupyter & Binder slides](https://docs.google.com/presentation/d/15d__yUJF_JvNMqTnvXnhjQjNP5bJLc3rlR4tpWRCQxA/edit#slide=id.p)
+- [ICESat2 Hackweek intro to Jupyter](https://github.com/ICESAT-2HackWeek/intro-jupyter-git)
+
