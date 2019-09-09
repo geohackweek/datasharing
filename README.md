@@ -2,8 +2,15 @@
 
 # Tutorial: Data Sharing and Collaboration Tools
 
+## Introduction to Jupyter & Binder
+- [Introduction to Jupyter](https://nbviewer.jupyter.org/github/geohackweek/datasharing/blob/master/notebooks/01-Introduction Jupyter.ipynb)
+- [IPython: Beyond Plain Python](https://nbviewer.jupyter.org/github/geohackweek/datasharing/blob/master/notebooks/02-Beyond Plain Python.ipynb)
 - [Intro to Jupyter & Binder slides](https://docs.google.com/presentation/d/15d__yUJF_JvNMqTnvXnhjQjNP5bJLc3rlR4tpWRCQxA/edit#slide=id.p)
-- [ICESat2 Hackweek intro to Jupyter](https://github.com/ICESAT-2HackWeek/intro-jupyter-git)
+- [Bonus: ICESat2 Hackweek intro to Jupyter](https://github.com/ICESAT-2HackWeek/intro-jupyter-git)
+
+## Environments with conda
 - [Introduction to conda](https://nbviewer.jupyter.org/github/geohackweek/datasharing/blob/master/notebooks/03-Conda.ipynb)
+
+## Setting up your own repository
 - [Sample git repository](https://github.com/geohackweek/sample_project_repository)
 
